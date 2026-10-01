@@ -1,0 +1,14 @@
+_site/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+exports/
+test-results/
+rust/target/
+_book_build/
+book/notebooks/
+book/assets/
+book/guide.md
+book/sources.md
+book/_toc.yml
+.jupyterlite.doit.db*

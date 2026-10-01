@@ -1,0 +1,2 @@
+# Separate environment recommended: Jupyter Book 1.x / Sphinx publishing pipeline.
+jupyter-book==1.0.4.post1

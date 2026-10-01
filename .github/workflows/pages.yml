@@ -1,0 +1,65 @@
+name: Test and publish Urban Twin Lab
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Compile and test Rust
+        run: |
+          rustup target add wasm32-unknown-unknown
+          cargo test --manifest-path rust/Cargo.toml
+          cargo build --manifest-path rust/Cargo.toml --release --target wasm32-unknown-unknown
+          mkdir -p content/assets
+          cp rust/target/wasm32-unknown-unknown/release/twin_kernel.wasm content/assets/
+      - name: Validate computations and notebooks
+        run: |
+          python scripts/test_core.py
+          python scripts/check_notebooks.py --require-wasm
+      - name: Build site
+        run: python scripts/build_site.py
+      - name: Build JupyterBook
+        run: |
+          python -m pip install -r requirements-book.txt
+          python scripts/build_book.py
+      - name: Test notebooks in browser Pyodide
+        run: |
+          python -m playwright install --with-deps chromium
+          python scripts/browser_check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-results
+          path: test-results/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment

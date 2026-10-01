@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Urban Twin Lab browser validation</title>
+<style>body{font:16px system-ui;margin:20px}iframe{width:100%;height:700px;border:1px solid #ccc}pre{white-space:pre-wrap}button{padding:12px}</style>
+<h1>Browser validation: ten real JupyterLite kernels</h1><button id="start">Run all notebook checks</button><pre id="report">Ready</pre><iframe id="lab" src="lite/lab/index.html"></iframe>
+<script>
+document.querySelector('#start').onclick=async()=>{
+ const report=document.querySelector('#report');const button=document.querySelector('#start');button.disabled=true;
+ const log=x=>report.textContent+='\n'+x;
+ try{
+  const frame=document.querySelector('#lab');
+  const app=frame.contentWindow.jupyterapp;
+  if(!app)throw Error('JupyterLite is still loading. Reload this page and wait for its launcher.');
+  await app.restored;
+  const items=await(await fetch('lite/files/notebooks.json')).json();
+  for(const item of items){
+   const path=item.slug+'.ipynb';log('RUNNING '+path);
+   const panel=await app.commands.execute('docmanager:open',{path});await panel.context.ready;
+   await panel.sessionContext.ready;
+   if(!panel.sessionContext.session?.kernel)await panel.sessionContext.changeKernel({name:'python'});
+   await app.commands.execute('notebook:run-all-cells');
+   const code=panel.content.model.toJSON().cells.filter(c=>c.cell_type==='code');
+   const outputs=code.flatMap(c=>c.outputs||[]);const errors=outputs.filter(o=>o.output_type==='error');
+   const images=outputs.filter(o=>o.data?.['image/png']).length;
+   const text=outputs.map(o=>o.text||'').join('');
+   if(errors.length||code.some(c=>c.execution_count==null)||!images)throw Error(path+': '+JSON.stringify({errors,counts:code.map(c=>c.execution_count),images}));
+   if(path.startsWith('10')&&!text.includes('Rust/WASM loaded'))throw Error('WASM not loaded');
+   log('PASS '+path+' | '+code.length+' code cells | '+images+' plot(s)');
+   await panel.context.save();await panel.sessionContext.shutdown();panel.close();
+  }
+  log('ALL 10 NOTEBOOKS PASSED IN BROWSER PYODIDE');
+ }catch(error){log('FAILED '+error.stack)}
+ button.disabled=false;
+};
+</script></html>

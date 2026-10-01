@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this educational notebook collection using the metadata below."
+title: "JupyterLite + GPT-6 Astra Geospatial: Urban Twin Lab"
+type: software
+authors:
+  - family-names: Tobias
+    given-names: James L.
+repository-code: "https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial"
+url: "https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-01
