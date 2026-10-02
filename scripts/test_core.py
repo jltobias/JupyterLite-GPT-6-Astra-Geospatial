@@ -8,6 +8,7 @@ from twin import allocate, local_xy, lonlat, network, shortest, mobility, grade_
 from experiments import paired_change, access_summary, grade_answer, spatial_suite, grade_suite
 from scenes import building_features, scene_html
 from twin import city
+from extension_tools import audit_footprints, capacity_assignment, timestamp_check, polygon_relation, shift_grid, radius_index, radius_query, load_data
 import json
 
 class Contracts(unittest.TestCase):
@@ -98,5 +99,66 @@ class Contracts(unittest.TestCase):
         document=scene_html('maplibre',{'text':'</script><script>alert(1)</script>'})
         self.assertNotIn('"text": "</script>',document)
         self.assertNotIn('__DATA__',document)
+
+class ExtendedContracts(unittest.TestCase):
+    def test_geometry_audit(self):
+        def f(key, ring):
+            return dict(id=key,geometry=dict(type='Polygon',coordinates=[ring]))
+        square=[[25,-24],[25.001,-24],[25.001,-23.999],[25,-23.999],[25,-24]]
+        crossed=[square[i] for i in [0,2,1,3,0]]
+        rows=audit_footprints(dict(features=[f('ok',square),f('open',square[:-1]),f('cross',crossed),f('ok',square)]))
+        self.assertEqual(rows[0]['issues'],[])
+        self.assertGreater(rows[0]['area_m2'],1000)
+        self.assertIn('unclosed ring',rows[1]['issues'])
+        self.assertIn('self intersection',rows[2]['issues'])
+        self.assertIn('duplicate ID',rows[3]['issues'])
+        self.assertTrue(all(r['area_m2'] is None for r in rows[1:]))
+        self.assertIn('outside study bounds',audit_footprints(dict(features=[f('x',square)]),[0,0,1,1])[0]['issues'])
+
+    def test_capacity_and_unreachable(self):
+        assigned,unserved=capacity_assignment([[1,2],[2,np.inf],[np.inf,np.inf]],[5,4,3],[6,2])
+        np.testing.assert_array_equal(assigned,[[5,0],[1,0],[0,0]])
+        np.testing.assert_array_equal(unserved,[0,3,3])
+        np.testing.assert_array_equal(assigned.sum(axis=1)+unserved,[5,4,3])
+        with self.assertRaises(ValueError): capacity_assignment([[np.nan]],[1],[1])
+
+    def test_timestamp_order(self):
+        self.assertTrue(timestamp_check(['2026-01-01','2026-01-02']))
+        for sequence in [['2026-01-01','2026-01-01'],['2026-01-02','2026-01-01'],['NaT']]:
+            self.assertFalse(timestamp_check(sequence))
+
+    def test_hole_semantics(self):
+        outer=[[0,0],[10,0],[10,10],[0,10]]; hole=[[4,4],[6,4],[6,6],[4,6]]
+        for point,expected in [([2,2],'inside'),([5,5],'outside'),([4,5],'boundary'),([10,5],'boundary'),([11,5],'outside')]:
+            self.assertEqual(polygon_relation(point,outer,[hole]),expected)
+            self.assertEqual(polygon_relation(point,outer[::-1],[hole[::-1]]),expected)
+
+    def test_no_wrap_registration(self):
+        grid=np.arange(6).reshape(2,3)
+        np.testing.assert_allclose(shift_grid(grid,1,-1),[[np.nan,np.nan,np.nan],[1,2,np.nan]],equal_nan=True)
+        for dy,dx in [(0,8),(-5,0),(2,0),(0,-3)]:
+            self.assertTrue(np.isnan(shift_grid(grid,dy,dx)).all())
+
+    def test_radius_boundary_and_negative_coordinates(self):
+        points=np.array([[-2.,0],[-1,0],[0,0],[1,0],[2,0],[0,1]])
+        buckets=radius_index(points,1)
+        np.testing.assert_array_equal(radius_query(points,buckets,np.array([0.,0]),1,1),[1,2,3,5])
+        np.testing.assert_array_equal(radius_query(points,buckets,np.array([-2.,0]),0,1),[0])
+
+    def test_real_data_contracts(self):
+        footprints=load_data('gaborone_buildings.geojson')
+        self.assertEqual(footprints['provenance']['license'],'ODbL-1.0')
+        self.assertEqual(len(footprints['features']),125)
+        self.assertTrue(all(not r['issues'] for r in audit_footprints(footprints)))
+        self.assertTrue(all(f['properties']['height_m'] is None for f in footprints['features']))
+        satellite=load_data('sentinel_chip.json')
+        self.assertEqual(satellite['pixel_m'],20)
+        self.assertEqual(np.array(satellite['red']).shape,(64,64))
+        self.assertEqual(satellite['provenance']['item_id'],'S2C_35JLN_20250123_0_L2A')
+        terrain=load_data('gaborone_terrain.json')
+        self.assertEqual(np.array(terrain['z']).shape,(32,32))
+        self.assertTrue((np.diff(terrain['y'])>0).all())
+        self.assertGreater(terrain['pixel_area_m2'],0)
+        self.assertFalse(satellite['synthetic'] or terrain['synthetic'])
 
 if __name__=='__main__': unittest.main()

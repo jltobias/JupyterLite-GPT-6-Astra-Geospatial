@@ -40,7 +40,7 @@ Choose a notebook, select **Python (Pyodide)** if prompted, and choose **Run →
 
 Start with 01 → 02 → 03 for spatial foundations, 09 for model evaluation, and 08 → 10 for learned dynamics and compiled computation. See the [research guide](docs/GUIDE.md) for ideas and expansion paths.
 
-For **3D mapping**, follow 14 → 15 → 16. Each exports an interactive HTML scene with embedded synthetic data, a static notebook plot and explicit units. Scenes load pinned JavaScript renderers from CDNs and need WebGL; no basemap account, tile service or Python widget extension is required. Open a downloaded scene directly if notebook trust settings block the embedded view.
+For **3D mapping**, follow 14 → 15 → 16. Each exports an interactive HTML scene, static notebook plots and explicit units. Extensions add real OSM footprints with unknown heights preserved, timestamped synthetic trips, and a real terrain chip with a selectable cross-section. Scenes load pinned JavaScript renderers from CDNs and need WebGL; no basemap account, tile service or Python widget extension is required. Open a downloaded scene directly if notebook trust settings block the embedded view.
 
 The [teaching guide](docs/TEACHING.md) provides workshop routes, copyable prompts, an assessment rubric and sharing instructions. All original notebooks now include a bounded Codex task and acceptance criteria. Labs 11–13 add response capture and scoring; default answers remain explicitly labeled fixtures.
 
@@ -52,7 +52,7 @@ Astra is a reasoning/coding collaborator and a model to evaluate. These notebook
 
 ## Data sources and provenance
 
-**No real-world geospatial dataset, satellite image, census extract, patient record or map tile is bundled or fetched.** Inputs come from equations and fixed seeds. The approximate anchor near Gaborone (`25.91° E, 24.68° S`) provides context only; it is not a surveyed location, study boundary or representation of Old Naledi.
+The baseline city, population, services and simulations are synthetic. Extended investigations also bundle three small public extracts near Gaborone: **125 OpenStreetMap footprints, a Sentinel-2 red/NIR/SCL chip, and a Mapzen terrain chip**. These are observational inputs, not validation of the invented population, clinics, exposure or forecasts. No census or patient records are included. See [data provenance and redistribution terms](content/data/README.md).
 
 | Data / asset | Actual source | Scope and license |
 |---|---|---|
@@ -66,11 +66,14 @@ Astra is a reasoning/coding collaborator and a model to evaluate. These notebook
 | Evaluation map, prompt and fixture | Original coordinates and computed truth | MIT; fixture is not an Astra response |
 | Raster-change grids and clouds | Original equations and fixed masks in lab 11 | Synthetic; MIT; not satellite imagery |
 | Evaluation suite | Original seeded distance, routing and rectangle tasks in [experiments.py](content/experiments.py) | Synthetic; MIT; fixtures are not model performance |
-| 3D scenes | Original building/network generators and analytic terrain | Synthetic; MIT; no observed heights, imagery or elevation tiles |
+| Baseline 3D scenes | Original building/network generators and analytic terrain | Synthetic; MIT |
+| OSM extensions (01, 02, 14) | 125 closed building ways; IDs, versions and timestamps retained | ODbL 1.0; all reported numeric heights missing |
+| Satellite extension (04) | Sentinel-2 L2A, 2025-01-23, 64 × 64 at 20 m | Modified Copernicus Sentinel data; added cloud patch is artificial |
+| Terrain extension (16) | Mapzen Terrarium tile 14/9371/9351, 32 × 32 subsample | Upstream terrain terms; vertical datum not independently verified |
 | Benchmark points and WASM | Original arithmetic sequence and [Rust source](rust/src/lib.rs) | Source MIT; toolchain support retains upstream licenses |
 | Splash graphic | Original [SVG illustration](assets/geospatial-splash.svg) | MIT; no stock image, map tile, borrowed logo or raster generation |
 
-Potential future sources are **not inputs to this release**: [OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL and attribution), [Overture Maps](https://docs.overturemaps.org/attribution/) (theme/source-specific licensing), census releases, facility registries and satellite products. Check the exact dataset release and redistribution terms before adding an extract.
+External data retain their own terms, attribution and processing records in `content/data/`. Overture, census and facility registries are not bundled. Large-source preprocessing stays on the desktop; notebook learners use the small committed extracts without API credentials.
 
 ## Citations and attributions
 
@@ -93,7 +96,7 @@ Documentation references checked October 1, 2026. Presentations were background 
 
 - Original code, notebooks, prose, synthetic fixtures and splash: **[MIT License](LICENSE)**. Preserve the copyright and license notice.
 - Third-party software retains its own terms; see **[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)**. Runtime distributions have additional transitive notices; retain them when vendoring offline assets.
-- Referenced PDFs, papers, external demos and future datasets are not relicensed. A citation does not grant redistribution rights. The supplied PDFs are not uploaded here.
+- Bundled external data, referenced PDFs, papers and external demos are not relicensed. A citation does not grant redistribution rights. The supplied PDFs are not uploaded here.
 - Product names are descriptive. This independent educational project does not imply endorsement by OpenAI, Project Jupyter, Peraton or CDC.
 
 ## Build, validate and publish
@@ -114,5 +117,7 @@ python -m http.server 8000 --directory _site
 ```
 
 CI recompiles Rust, checks the calculations, builds both sites and runs the notebooks in a browser kernel before publishing. The book contains validation-run outputs; JupyterLite provides editable execution. [Validation notes](docs/VALIDATION.md) distinguish completed checks from unperformed model evaluations.
+
+All sixteen notebooks now include an implemented extension, an input/method/evidence/limit concept map, spatial comparison graphics, an evidence-only Astra prompt export and a response-scoring cell. Model trials default to **NOT RUN**; computed fixtures are not model-performance results. The extension source lives in `scripts/extensions_*.py` and `scripts/notebook_extensions.py`.
 
 **Extend with Codex:** change one assumption, retain a fixed baseline, add a meaningful invariant, edit the authoring source (`scripts/make_notebooks.py` and the teaching/mapping modules it imports), regenerate, and rerun the checks. The editable 3D templates are in `content/scene_templates/`. Never put an API secret in a notebook or static site.

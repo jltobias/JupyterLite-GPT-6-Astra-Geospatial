@@ -61,7 +61,7 @@ try:
             (OUT/(item['slug']+'.json')).write_text(json.dumps(result,indent=2),encoding='utf-8')
             assert not result['errors'],result
             assert all(x is not None for x in result['counts']),result
-            assert result['plots']>0,result
+            assert result['plots']>=3,result
             if path.startswith('10'): assert 'Rust/WASM loaded' in result['text'],result
             if path[:2] in {'14','15','16'}:
                 scene=page.frame_locator('iframe[title]').last
@@ -70,7 +70,7 @@ try:
                 assert frames, 'Expected an embedded 3D scene'
                 frames[-1].wait_for_function('window.sceneReady===true',timeout=120000)
                 if path.startswith('14'):
-                    frames[-1].wait_for_function('window.sceneMap.loaded() && window.sceneMap.queryRenderedFeatures({layers:["buildings"]}).length>0',timeout=120000)
+                    frames[-1].wait_for_function('window.sceneMap.loaded() && window.sceneMap.queryRenderedFeatures({layers:["buildings","footprints"]}).length>0',timeout=120000)
             page.screenshot(path=str(OUT/(item['slug']+'.png')))
             reports.append({'notebook':path,'passed':True,'plots':result['plots']})
             print('BROWSER PASS',path,flush=True)

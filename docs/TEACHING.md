@@ -2,6 +2,31 @@
 
 Every learner can run the numerical baselines without a model account. Learners with Astra access can collect model responses; others can critique a partner's explanation or use the explicitly labeled fixtures. Both paths practice the same evidence checks. Only actual, recorded model responses count as model trials.
 
+## Use the implemented investigations
+
+Every notebook now includes a concept map, an executed extension, spatial comparison graphics and an optional scored Astra trial. Read the four concept-map branches (input, method, evidence, limit) before running the code. Ask learners to predict one pattern, point to it on the resulting map, then verify it numerically. Preserve both outputs when changing an assumption.
+
+| Notebook | Implemented investigation | Visual evidence |
+|---|---|---|
+| 01 | Audit real OSM geometry and four injected defects | Footprint map, area distribution, defect chart |
+| 02 | Conserve four neighborhood totals under floor assumptions | Allocation and sensitivity maps |
+| 03 | Compare travel modes, opening hours and capacities | Access curves and unserved-population map |
+| 04 | Inspect real Sentinel reflectance and an artificial cloud mask | NDVI and categorical SCL maps |
+| 05 | Sample flooded road endpoints and midpoints | Disconnection curves and reachable network |
+| 06 | Link activity histories to places and shared settings | Place/route map and dose comparisons |
+| 07 | Check stale sensors and interval coverage | Sensor map, residual heatmap, coverage distributions |
+| 08 | Evaluate nonlinear dynamics on held-out trajectories | Neighborhood effects, rollout errors, action-support diagram |
+| 09 | Add ties, missing scale and axis-order challenges | Multi-case map atlas and trial register |
+| 10 | Compare batched spatial queries and a finite-radius index | Query map and timing curves |
+| 11 | Correct a shifted raster without wrapping | Before/after alignment and detected-change maps |
+| 12 | Add facility capacities to siting objectives | Worst-group coverage, assignment lines and unserved map |
+| 13 | Evaluate polygon holes and explicit boundaries | Containment diagrams and four-family benchmark |
+| 14 | Preserve missing heights in real OSM footprints | Flat footprint scene, floor filter and assumption chart |
+| 15 | Follow timestamped trips and filter population | Moving markers, route map and trip timeline |
+| 16 | Inspect real terrain with relative elevations | Hillshade, elevation map and selectable cross-section |
+
+The `NN_extension_prompt.json` export contains evidence and requested fields, not the answer key. `NN_extension_map.png` is the corresponding shareable figure. Keep the complete notebook and `NN_extension_trial.json` private during a blind model trial because they contain computed reference answers. Record text-only, image-only and combined conditions separately. A missing model response remains **NOT RUN**, never a synthetic success. Some image-only tasks lack enough information; discussing that limitation is part of the lesson.
+
 ## Choose a workshop route
 
 | Session | Sequence | Take-home artifact |
@@ -48,7 +73,7 @@ Official [Astra documentation](https://developers.openai.com/api/docs/models/gpt
 
 Each scene has keyboard-operable controls, explanatory labels and a static notebook plot. MapLibre and deck.gl also include HTML data tables; the terrain scene provides numerical area summaries and an exported raster. Perspective views remain inherently less accessible than tables and plan views, so do not make visual inspection the only graded activity.
 
-The generated scenes are downloadable HTML files. They embed synthetic data, but still fetch pinned JavaScript/CSS from CDNs. If notebook trust or an embed policy prevents rendering, open the downloaded HTML directly. Do not copy private location data into a public artifact. No 3D model generation, photogrammetry or real-world terrain accuracy is claimed.
+The generated scenes are downloadable HTML files. They embed their data, including explicitly labeled public-data extracts in the footprint and terrain extensions, but still fetch pinned JavaScript/CSS from CDNs. If notebook trust or an embed policy prevents rendering, open the downloaded HTML directly. Do not copy private location data into a public artifact. No 3D model generation, photogrammetry or real-world terrain accuracy is claimed.
 
 ## Model-trial record
 

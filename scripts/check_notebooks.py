@@ -54,13 +54,17 @@ async def main():
             assert scope['wasm_fn'] is not None,'Compiled Rust/WASM is required for this check'
         plt.close('all')
         nbformat.write(nb,executed/path.name)
+        assert 'extension_prompt' in scope and 'extension_grade' in scope,'Missing executable extension'
+        assert scope['extension_grade']=={'status':'NOT RUN'},'Do not publish a fabricated model trial'
+        plot_count=sum('image/png' in o.get('data',{}) for c in nb.cells if c.cell_type=='code' for o in c.outputs)
+        assert plot_count>=3, 'Require baseline, concept map and extension visual'
         report.append(dict(notebook=path.name,passed=True,seconds=round(time.perf_counter()-start,3)))
         print('PASS',path)
     assert len(report)==len(expected)>0
     out=ROOT/'test-results'; out.mkdir(exist_ok=True)
     (out/'desktop.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     scene_dir=out/'scenes'; scene_dir.mkdir(exist_ok=True)
-    for name in ['14_maplibre_scene.html','15_deckgl_scene.html','16_terrain_scene.html']:
+    for name in ['14_maplibre_scene.html','14_real_footprints.html','15_deckgl_scene.html','16_terrain_scene.html','16_real_terrain.html']:
         shutil.copy2(Path('exports')/name,scene_dir/name)
 
 asyncio.run(main())

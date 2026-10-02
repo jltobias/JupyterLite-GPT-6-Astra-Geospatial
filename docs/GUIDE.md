@@ -1,6 +1,6 @@
 # Urban Twin Lab: a practical research path
 
-This collection offers sixteen experiments in geospatial reasoning, urban scenarios and 3D mapping. Start with notebooks 01–03, then 09 and 13 to evaluate Astra, 08 for learned dynamics, and 14–16 for interactive 3D mapping. Each notebook runs independently with synthetic data. See the teaching chapter for workshop routes and assessment criteria.
+This collection offers sixteen experiments in geospatial reasoning, urban scenarios and 3D mapping. Start with notebooks 01–03, then 09 and 13 to evaluate Astra, 08 for learned dynamics, and 14–16 for interactive 3D mapping. Each notebook runs independently. Synthetic baselines are supplemented by small, attributed OSM, Sentinel-2 and terrain extracts in selected extensions; see [data provenance](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/content/data/README.md). See the teaching chapter for workshop routes and assessment criteria.
 
 ## What Astra contributes
 

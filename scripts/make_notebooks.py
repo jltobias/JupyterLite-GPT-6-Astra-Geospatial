@@ -5,6 +5,7 @@ from pathlib import Path
 from teaching_cards import teaching_card
 from teaching_labs import add_labs
 from mapping_labs import add_mapping_labs
+from notebook_extensions import extension_cells
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = []
@@ -34,8 +35,9 @@ def notebook(slug, title, question, experiment, sections, extension):
 
 **Runtime:** Python / Pyodide in JupyterLite. Choose **Run → Run All Cells**.
 Each notebook is independent; start with a fresh kernel. Initial runtime/package downloads need internet.
-All city geometry, residents, sensor observations and parameters are **synthetic educational fixtures**.
-The longitude/latitude anchor is near Gaborone, but these are not mapped Gaborone assets or a validated city twin.
+The initial baseline uses **synthetic educational fixtures** near a Gaborone-area anchor.
+Extended investigations explicitly identify bundled real OSM, Sentinel or terrain extracts where used;
+these do not validate the synthetic population, mobility, exposure or scenario assumptions.
 
 **Astra experiment:** {experiment}
 Run the numerical baseline first, then give Astra the exported evidence and the prompt below.
@@ -46,15 +48,12 @@ The baseline does not call or run GPT-6 Astra. No API key is needed.
     card = teaching_card(slug[:2])
     if card:
         cells.append(cell('markdown',card))
-    cells.append(cell('markdown',f'''## Extend with Codex or Astra
-{extension}
-
-Keep the baseline seed and tests fixed while changing one assumption. Record the model name,
-date, exact prompt, response and error metrics. Generated code must pass the same checks.
-Download files in `exports/` and your edited notebook; browser storage does not commit changes to GitHub.
-See [the project guide](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/docs/GUIDE.md)
-for capabilities, evidence, sources and the route to real data.
-'''))
+    for kind,text in extension_cells(slug[:2]): cells.append(cell(kind,text))
+    cells.append(cell('markdown','''## Save the investigation
+Download the edited notebook, evidence, map and trial record from `exports/`. Browser storage does not
+commit changes to GitHub. Keep data attribution and the distinction between observed data, synthetic
+assumptions and actual model responses when sharing. The extended code and its checks above are part of
+this notebook; use them as the starting point for your next controlled comparison.'''))
     for i,c in enumerate(cells): c['id']=f'{slug[:2]}-{i:02d}'
     nb=dict(nbformat=4,nbformat_minor=5,metadata=dict(kernelspec=dict(display_name='Python (Pyodide)',language='python',name='python'),language_info=dict(name='python',version='3.12')),cells=cells)
     (ROOT/'content'/f'{slug}.ipynb').write_text(json.dumps(nb,indent=1),encoding='utf-8')

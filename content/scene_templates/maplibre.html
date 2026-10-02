@@ -4,18 +4,22 @@
 <style>__STYLE__</style>
 <header><div class="eyebrow">URBAN TWIN LAB / 14 / MAPLIBRE</div><h1>Buildings in three dimensions</h1><p>Synthetic footprints near a Gaborone-area anchor. Height = floors × assumed floor height.</p></header>
 <div class="controls"><label>Height exaggeration <input id="height" type="range" min="1" max="10" step="1" value="1"><output id="factor">1×</output></label>
-<button id="top">Top view</button><button id="reset">Reset 3D</button><span><i class="swatch" style="background:#087f8c"></i>Residential <i class="swatch" style="background:#dc9526"></i>Other</span></div>
+<label>Minimum floors <input id="floors" type="range" min="0" max="4" value="0"><output id="minimum">All</output></label>
+<button id="top">Top view</button><button id="reset">Reset 3D</button><span><i class="swatch" style="background:#087f8c"></i>Residential <i class="swatch" style="background:#dc9526"></i>Other <i class="swatch" style="background:#8c9ca5"></i>Unknown height</span></div>
 <div id="view" aria-label="Interactive synthetic building map"></div><div id="status" role="status">Loading MapLibre; requires internet and WebGL.</div>
 <details><summary>Accessible building table (unexaggerated values)</summary><div class="table-scroll"><table><thead><tr><th>ID</th><th>Floors</th><th>Height (m)</th><th>Residents</th></tr></thead><tbody id="rows"></tbody></table></div></details>
-<footer>Drag to pan; right-drag to rotate/tilt; scroll to zoom; click a building for its values. No basemap or tiles requested. Data: original synthetic fixtures, MIT. Renderer: <a href="https://maplibre.org/">MapLibre GL JS</a> 5.6.1 (BSD-3-Clause).</footer>
+<footer>Drag to pan; right-drag to rotate/tilt; scroll to zoom; click a building for its values. No basemap or tiles requested. <span id="attribution">Data: original synthetic fixtures, MIT.</span> Renderer: <a href="https://maplibre.org/">MapLibre GL JS</a> 5.6.1 (BSD-3-Clause).</footer>
 <script>const DATA=__DATA__; window.sceneData=DATA;
 const status=document.querySelector('#status');
-for(const f of DATA.buildings.features){const p=f.properties;const tr=document.createElement('tr');for(const v of [p.id,p.floors,p.height_m,p.population]){const td=document.createElement('td');td.textContent=v;tr.append(td)}document.querySelector('#rows').append(tr)}
+if(DATA.title) document.querySelector('h1').textContent=DATA.title;
+if(DATA.description) document.querySelector('header p').textContent=DATA.description;
+if(DATA.attribution) document.querySelector('#attribution').textContent=DATA.attribution;
+function table(features){document.querySelector('#rows').replaceChildren();for(const f of features){const p=f.properties;const tr=document.createElement('tr');for(const v of [p.id,p.floors,p.height_m,p.population]){const td=document.createElement('td');td.textContent=v??'Unknown';tr.append(td)}document.querySelector('#rows').append(tr)}}
 window.addEventListener('error',()=>{status.textContent='Renderer unavailable. Use the table and notebook static plot.'});
 </script><script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js" onerror="status.textContent='MapLibre download failed; use the table or static notebook plot.'"></script>
 <script>
 try {
-const camera={center:DATA.center,zoom:15.4,pitch:60,bearing:-20};
+const camera={center:DATA.center,zoom:DATA.zoom??15.4,pitch:60,bearing:-20};
 const map=new maplibregl.Map({container:'view',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#e8eef0'}}]},...camera});
 window.sceneMap=map; map.addControl(new maplibregl.NavigationControl());map.addControl(new maplibregl.ScaleControl());
 map.on('error',e=>{status.textContent='Map error: '+e.error.message});
@@ -23,13 +27,17 @@ map.on('load',()=>{
  map.addSource('buildings',{type:'geojson',data:DATA.buildings});
  map.addSource('roads',{type:'geojson',data:DATA.roads});
  map.addLayer({id:'roads',type:'line',source:'roads',paint:{'line-color':'#a2b6c0','line-width':2}});
- map.addLayer({id:'buildings',type:'fill-extrusion',source:'buildings',paint:{'fill-extrusion-color':['case',['get','residential'],'#087f8c','#dc9526'],'fill-extrusion-height':['get','height_m'],'fill-extrusion-opacity':.9}});
- const update=()=>{const factor=Number(document.querySelector('#height').value);document.querySelector('#factor').textContent=factor+'×';map.setPaintProperty('buildings','fill-extrusion-height',['*',['get','height_m'],factor]);status.textContent=DATA.buildings.features.length+' synthetic buildings · height exaggeration '+factor+'× · raw heights preserved in table';window.sceneState={factor}};
- document.querySelector('#height').oninput=update;update();
- map.once('idle',()=>{window.sceneReady=map.queryRenderedFeatures({layers:['buildings']}).length>0});
+ map.addLayer({id:'footprints',type:'fill',source:'buildings',paint:{'fill-color':'#8c9ca5','fill-opacity':.6}});
+ map.addLayer({id:'buildings',type:'fill-extrusion',source:'buildings',paint:{'fill-extrusion-color':['case',['==',['get','height_known'],false],'#8c9ca5',['get','residential'],'#087f8c','#dc9526'],'fill-extrusion-height':['coalesce',['get','height_m'],0],'fill-extrusion-opacity':.9}});
+ const update=()=>{const factor=Number(document.querySelector('#height').value),minimum=Number(document.querySelector('#floors').value);document.querySelector('#factor').textContent=factor+'×';document.querySelector('#minimum').textContent=minimum||'All';map.setPaintProperty('buildings','fill-extrusion-height',['*',['coalesce',['get','height_m'],0],factor]);
+ const filter=['>=',['coalesce',['get','floors'],0],minimum];map.setFilter('buildings',filter);map.setFilter('footprints',filter);
+ const visible=DATA.buildings.features.filter(f=>(f.properties.floors??0)>=minimum);table(visible);
+ status.textContent=visible.length+' / '+DATA.buildings.features.length+' buildings visible · exaggeration '+factor+'× · missing heights remain unknown';window.sceneState={factor,minimum,visible:visible.length}};
+ document.querySelector('#height').oninput=update;document.querySelector('#floors').oninput=update;update();
+ map.once('idle',()=>{window.sceneReady=map.queryRenderedFeatures({layers:['buildings','footprints']}).length>0});
 });
 document.querySelector('#top').onclick=()=>map.easeTo({pitch:0,bearing:0,duration:0});
 document.querySelector('#reset').onclick=()=>map.jumpTo(camera);
-map.on('click','buildings',e=>{const p=e.features[0].properties;new maplibregl.Popup().setLngLat(e.lngLat).setText(p.id+' | '+p.height_m+' m | '+p.population+' residents | synthetic').addTo(map)});
+map.on('click','footprints',e=>{const p=e.features[0].properties;new maplibregl.Popup().setLngLat(e.lngLat).setText(p.id+' | height: '+(p.height_m??'unknown')+' | residents: '+(p.population??'unknown')).addTo(map)});
 } catch(error){status.textContent='WebGL scene unavailable: '+error.message+'. Use the table or notebook plot.'}
 </script></html>

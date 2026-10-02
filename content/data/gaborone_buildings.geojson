@@ -1,0 +1,5716 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": "way/662362031",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9099621,
+       -24.6789096
+      ],
+      [
+       25.910009,
+       -24.678476
+      ],
+      [
+       25.9100559,
+       -24.6781439
+      ],
+      [
+       25.9101009,
+       -24.6777851
+      ],
+      [
+       25.9101391,
+       -24.6777887
+      ],
+      [
+       25.9100982,
+       -24.6781092
+      ],
+      [
+       25.9100432,
+       -24.6784961
+      ],
+      [
+       25.9099947,
+       -24.6789114
+      ],
+      [
+       25.9099621,
+       -24.6789096
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362031",
+    "source_version": "2",
+    "source_timestamp": "2023-07-19T11:36:10Z",
+    "building": "roof",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362039",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9098903,
+       -24.6783511
+      ],
+      [
+       25.9098977,
+       -24.6782903
+      ],
+      [
+       25.9098877,
+       -24.6782893
+      ],
+      [
+       25.9099039,
+       -24.6781554
+      ],
+      [
+       25.9099152,
+       -24.6781565
+      ],
+      [
+       25.9099225,
+       -24.6780959
+      ],
+      [
+       25.9100294,
+       -24.6781066
+      ],
+      [
+       25.9100227,
+       -24.6781619
+      ],
+      [
+       25.9100432,
+       -24.678164
+      ],
+      [
+       25.9100262,
+       -24.6783051
+      ],
+      [
+       25.9100056,
+       -24.678303
+      ],
+      [
+       25.9099985,
+       -24.6783619
+      ],
+      [
+       25.9098903,
+       -24.6783511
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362039",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:45Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362041",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9101418,
+       -24.6788891
+      ],
+      [
+       25.9101432,
+       -24.6788683
+      ],
+      [
+       25.9100866,
+       -24.6788652
+      ],
+      [
+       25.9100906,
+       -24.6788062
+      ],
+      [
+       25.9100189,
+       -24.6788023
+      ],
+      [
+       25.9100267,
+       -24.6786866
+      ],
+      [
+       25.9101024,
+       -24.6786908
+      ],
+      [
+       25.9101055,
+       -24.6786439
+      ],
+      [
+       25.9104609,
+       -24.6786637
+      ],
+      [
+       25.9104559,
+       -24.6787389
+      ],
+      [
+       25.910492,
+       -24.6787409
+      ],
+      [
+       25.9104844,
+       -24.6788543
+      ],
+      [
+       25.9104483,
+       -24.6788523
+      ],
+      [
+       25.9104446,
+       -24.6789059
+      ],
+      [
+       25.9101418,
+       -24.6788891
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362041",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:45Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362044",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9098722,
+       -24.6792511
+      ],
+      [
+       25.9098829,
+       -24.6790926
+      ],
+      [
+       25.9098639,
+       -24.6790915
+      ],
+      [
+       25.9098655,
+       -24.6790683
+      ],
+      [
+       25.9097437,
+       -24.6790615
+      ],
+      [
+       25.9097506,
+       -24.6789591
+      ],
+      [
+       25.9099206,
+       -24.6789685
+      ],
+      [
+       25.9099247,
+       -24.6789075
+      ],
+      [
+       25.9099621,
+       -24.6789096
+      ],
+      [
+       25.9099947,
+       -24.6789114
+      ],
+      [
+       25.9100692,
+       -24.6789155
+      ],
+      [
+       25.9100654,
+       -24.6789714
+      ],
+      [
+       25.9100547,
+       -24.6789708
+      ],
+      [
+       25.9100537,
+       -24.6789852
+      ],
+      [
+       25.9101446,
+       -24.6789903
+      ],
+      [
+       25.9101378,
+       -24.6790917
+      ],
+      [
+       25.9100166,
+       -24.6790849
+      ],
+      [
+       25.9100148,
+       -24.6791108
+      ],
+      [
+       25.9099915,
+       -24.6791095
+      ],
+      [
+       25.9099815,
+       -24.6792571
+      ],
+      [
+       25.9098722,
+       -24.6792511
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362044",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:45Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362119",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9100841,
+       -24.6785613
+      ],
+      [
+       25.9100931,
+       -24.6784881
+      ],
+      [
+       25.9100577,
+       -24.6784845
+      ],
+      [
+       25.9100676,
+       -24.6784045
+      ],
+      [
+       25.910103,
+       -24.6784081
+      ],
+      [
+       25.9101103,
+       -24.6783489
+      ],
+      [
+       25.9104713,
+       -24.6783857
+      ],
+      [
+       25.910464,
+       -24.6784453
+      ],
+      [
+       25.9105566,
+       -24.6784547
+      ],
+      [
+       25.9105427,
+       -24.6785681
+      ],
+      [
+       25.91045,
+       -24.6785587
+      ],
+      [
+       25.9104452,
+       -24.678598
+      ],
+      [
+       25.9100841,
+       -24.6785613
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362119",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:47Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362121",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9101297,
+       -24.6782804
+      ],
+      [
+       25.910135,
+       -24.6782395
+      ],
+      [
+       25.9100956,
+       -24.6782353
+      ],
+      [
+       25.9101054,
+       -24.6781599
+      ],
+      [
+       25.9101448,
+       -24.6781641
+      ],
+      [
+       25.9101506,
+       -24.6781194
+      ],
+      [
+       25.9104206,
+       -24.6781484
+      ],
+      [
+       25.9104146,
+       -24.6781948
+      ],
+      [
+       25.910451,
+       -24.6781987
+      ],
+      [
+       25.9104402,
+       -24.6782814
+      ],
+      [
+       25.9104007,
+       -24.6782772
+      ],
+      [
+       25.9103966,
+       -24.6783091
+      ],
+      [
+       25.9101297,
+       -24.6782804
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362121",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:47Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362124",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9101076,
+       -24.6781129
+      ],
+      [
+       25.9101129,
+       -24.6780349
+      ],
+      [
+       25.9101835,
+       -24.6780389
+      ],
+      [
+       25.9101781,
+       -24.6781169
+      ],
+      [
+       25.9101076,
+       -24.6781129
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362124",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:47Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/662362127",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9102008,
+       -24.6780775
+      ],
+      [
+       25.9102089,
+       -24.6780047
+      ],
+      [
+       25.9101861,
+       -24.6780026
+      ],
+      [
+       25.9101836,
+       -24.6780247
+      ],
+      [
+       25.9101326,
+       -24.67802
+      ],
+      [
+       25.9101456,
+       -24.677903
+      ],
+      [
+       25.9101966,
+       -24.6779076
+      ],
+      [
+       25.910191,
+       -24.6779582
+      ],
+      [
+       25.9102113,
+       -24.67796
+      ],
+      [
+       25.9102203,
+       -24.6778788
+      ],
+      [
+       25.910542,
+       -24.6779083
+      ],
+      [
+       25.9105373,
+       -24.6779508
+      ],
+      [
+       25.9105765,
+       -24.6779544
+      ],
+      [
+       25.9105637,
+       -24.6780701
+      ],
+      [
+       25.9105244,
+       -24.6780665
+      ],
+      [
+       25.91052,
+       -24.6781068
+      ],
+      [
+       25.9102008,
+       -24.6780775
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/662362127",
+    "source_version": "1",
+    "source_timestamp": "2019-01-11T14:00:47Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807370925",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9099513,
+       -24.6809268
+      ],
+      [
+       25.909975,
+       -24.6809522
+      ],
+      [
+       25.9100207,
+       -24.680917
+      ],
+      [
+       25.9100328,
+       -24.68093
+      ],
+      [
+       25.9100771,
+       -24.6808959
+      ],
+      [
+       25.9100308,
+       -24.6808464
+      ],
+      [
+       25.9099842,
+       -24.6808823
+      ],
+      [
+       25.9099946,
+       -24.6808934
+      ],
+      [
+       25.9099513,
+       -24.6809268
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807370925",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:32:56Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807370927",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.909977,
+       -24.681085
+      ],
+      [
+       25.9100444,
+       -24.6811599
+      ],
+      [
+       25.9101664,
+       -24.6810694
+      ],
+      [
+       25.9100991,
+       -24.6809945
+      ],
+      [
+       25.909977,
+       -24.681085
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807370927",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:32:56Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807370928",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9101975,
+       -24.681008
+      ],
+      [
+       25.9102632,
+       -24.6810796
+      ],
+      [
+       25.9103957,
+       -24.6809791
+      ],
+      [
+       25.9103299,
+       -24.6809075
+      ],
+      [
+       25.9101975,
+       -24.681008
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807370928",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:32:56Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371771",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9108698,
+       -24.6809651
+      ],
+      [
+       25.9108606,
+       -24.6810578
+      ],
+      [
+       25.9110255,
+       -24.6810713
+      ],
+      [
+       25.9110347,
+       -24.6809787
+      ],
+      [
+       25.9108698,
+       -24.6809651
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371771",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371772",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9106123,
+       -24.6803895
+      ],
+      [
+       25.9107005,
+       -24.6804291
+      ],
+      [
+       25.9107797,
+       -24.6802832
+      ],
+      [
+       25.9106915,
+       -24.6802437
+      ],
+      [
+       25.9106123,
+       -24.6803895
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371772",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371773",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9103187,
+       -24.6804143
+      ],
+      [
+       25.9104088,
+       -24.6804552
+      ],
+      [
+       25.9104858,
+       -24.6803154
+      ],
+      [
+       25.9103956,
+       -24.6802744
+      ],
+      [
+       25.9103187,
+       -24.6804143
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371773",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371774",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.910036,
+       -24.6804126
+      ],
+      [
+       25.9101297,
+       -24.6804513
+      ],
+      [
+       25.9101877,
+       -24.6803353
+      ],
+      [
+       25.910094,
+       -24.6802966
+      ],
+      [
+       25.910036,
+       -24.6804126
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371774",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371776",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9098789,
+       -24.6799051
+      ],
+      [
+       25.9099467,
+       -24.6799808
+      ],
+      [
+       25.9100223,
+       -24.6799248
+      ],
+      [
+       25.9099545,
+       -24.6798492
+      ],
+      [
+       25.9098789,
+       -24.6799051
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371776",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371777",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9100581,
+       -24.6798551
+      ],
+      [
+       25.9101238,
+       -24.6799306
+      ],
+      [
+       25.9102009,
+       -24.6798752
+      ],
+      [
+       25.9101352,
+       -24.6797996
+      ],
+      [
+       25.9100581,
+       -24.6798551
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371777",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371778",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9100144,
+       -24.6796179
+      ],
+      [
+       25.9100701,
+       -24.6796759
+      ],
+      [
+       25.9101444,
+       -24.6796168
+      ],
+      [
+       25.9100887,
+       -24.6795589
+      ],
+      [
+       25.9100144,
+       -24.6796179
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371778",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371782",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9107923,
+       -24.6800348
+      ],
+      [
+       25.9108878,
+       -24.6800706
+      ],
+      [
+       25.9109555,
+       -24.6799213
+      ],
+      [
+       25.9108601,
+       -24.6798856
+      ],
+      [
+       25.9107923,
+       -24.6800348
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371782",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371783",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9111398,
+       -24.6800311
+      ],
+      [
+       25.9112356,
+       -24.6800711
+      ],
+      [
+       25.911309,
+       -24.679926
+      ],
+      [
+       25.9112132,
+       -24.6798861
+      ],
+      [
+       25.9111398,
+       -24.6800311
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371783",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371784",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9109505,
+       -24.6792883
+      ],
+      [
+       25.9109331,
+       -24.6794375
+      ],
+      [
+       25.9110853,
+       -24.6794521
+      ],
+      [
+       25.9111026,
+       -24.6793029
+      ],
+      [
+       25.9109505,
+       -24.6792883
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371784",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371785",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9112346,
+       -24.6789739
+      ],
+      [
+       25.9113413,
+       -24.6789434
+      ],
+      [
+       25.9112699,
+       -24.6787374
+      ],
+      [
+       25.9111633,
+       -24.6787679
+      ],
+      [
+       25.9112346,
+       -24.6789739
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371785",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371786",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9111557,
+       -24.678691
+      ],
+      [
+       25.9112553,
+       -24.6786698
+      ],
+      [
+       25.9112036,
+       -24.6784692
+      ],
+      [
+       25.911104,
+       -24.6784904
+      ],
+      [
+       25.9111557,
+       -24.678691
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371786",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371787",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9110901,
+       -24.6784204
+      ],
+      [
+       25.9111859,
+       -24.6784001
+      ],
+      [
+       25.9111345,
+       -24.6782
+      ],
+      [
+       25.9110388,
+       -24.6782202
+      ],
+      [
+       25.9110901,
+       -24.6784204
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371787",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807371788",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9110275,
+       -24.6781513
+      ],
+      [
+       25.9111287,
+       -24.6781253
+      ],
+      [
+       25.9110643,
+       -24.6779186
+      ],
+      [
+       25.9109631,
+       -24.6779446
+      ],
+      [
+       25.9110275,
+       -24.6781513
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807371788",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T21:39:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807383041",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126598,
+       -24.6809425
+      ],
+      [
+       25.9127385,
+       -24.6809098
+      ],
+      [
+       25.912774,
+       -24.6809804
+      ],
+      [
+       25.9126953,
+       -24.6810131
+      ],
+      [
+       25.9126598,
+       -24.6809425
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807383041",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T22:31:14Z",
+    "building": "house",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807383042",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125929,
+       -24.6810063
+      ],
+      [
+       25.9126292,
+       -24.6809972
+      ],
+      [
+       25.9126439,
+       -24.6810463
+      ],
+      [
+       25.9127471,
+       -24.6810207
+      ],
+      [
+       25.9127549,
+       -24.6810465
+      ],
+      [
+       25.9126153,
+       -24.6810811
+      ],
+      [
+       25.9125929,
+       -24.6810063
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807383042",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T22:31:14Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807383043",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128832,
+       -24.6809929
+      ],
+      [
+       25.9129882,
+       -24.6809587
+      ],
+      [
+       25.9130005,
+       -24.6809901
+      ],
+      [
+       25.9128956,
+       -24.6810243
+      ],
+      [
+       25.9128832,
+       -24.6809929
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807383043",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T22:31:14Z",
+    "building": "house",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807383044",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129956,
+       -24.6808441
+      ],
+      [
+       25.9131023,
+       -24.6808197
+      ],
+      [
+       25.913138,
+       -24.6809481
+      ],
+      [
+       25.9130312,
+       -24.6809726
+      ],
+      [
+       25.9129956,
+       -24.6808441
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807383044",
+    "source_version": "1",
+    "source_timestamp": "2020-05-22T22:31:14Z",
+    "building": "house",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450123",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9113969,
+       -24.6778606
+      ],
+      [
+       25.9115237,
+       -24.6778375
+      ],
+      [
+       25.9115635,
+       -24.6780183
+      ],
+      [
+       25.9114419,
+       -24.6780404
+      ],
+      [
+       25.9114244,
+       -24.6779613
+      ],
+      [
+       25.9113749,
+       -24.6779703
+      ],
+      [
+       25.9113681,
+       -24.6779395
+      ],
+      [
+       25.9114125,
+       -24.6779314
+      ],
+      [
+       25.9113969,
+       -24.6778606
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450123",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450124",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9114694,
+       -24.6780881
+      ],
+      [
+       25.9115774,
+       -24.6780666
+      ],
+      [
+       25.9116206,
+       -24.678245
+      ],
+      [
+       25.911504,
+       -24.6782683
+      ],
+      [
+       25.9114861,
+       -24.6781942
+      ],
+      [
+       25.9114331,
+       -24.6782048
+      ],
+      [
+       25.9114264,
+       -24.678177
+      ],
+      [
+       25.9114879,
+       -24.6781648
+      ],
+      [
+       25.9114694,
+       -24.6780881
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450124",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450125",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9115187,
+       -24.6783264
+      ],
+      [
+       25.9116393,
+       -24.6783012
+      ],
+      [
+       25.9116843,
+       -24.678479
+      ],
+      [
+       25.9115709,
+       -24.6785027
+      ],
+      [
+       25.9115528,
+       -24.6784309
+      ],
+      [
+       25.9114985,
+       -24.6784422
+      ],
+      [
+       25.9114896,
+       -24.6784071
+      ],
+      [
+       25.9115366,
+       -24.6783973
+      ],
+      [
+       25.9115187,
+       -24.6783264
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450125",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450126",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9115661,
+       -24.67857
+      ],
+      [
+       25.9116435,
+       -24.6785554
+      ],
+      [
+       25.9116898,
+       -24.6787574
+      ],
+      [
+       25.9116123,
+       -24.6787721
+      ],
+      [
+       25.9115661,
+       -24.67857
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450126",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450127",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9116182,
+       -24.6788488
+      ],
+      [
+       25.9117118,
+       -24.6788285
+      ],
+      [
+       25.9117659,
+       -24.6790346
+      ],
+      [
+       25.9116723,
+       -24.6790549
+      ],
+      [
+       25.9116182,
+       -24.6788488
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450127",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450128",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9117023,
+       -24.6791255
+      ],
+      [
+       25.9117847,
+       -24.6791069
+      ],
+      [
+       25.9118406,
+       -24.6793109
+      ],
+      [
+       25.9117582,
+       -24.6793295
+      ],
+      [
+       25.9117023,
+       -24.6791255
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450128",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450129",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9117753,
+       -24.6793918
+      ],
+      [
+       25.9118506,
+       -24.679377
+      ],
+      [
+       25.9118986,
+       -24.6795787
+      ],
+      [
+       25.9118233,
+       -24.6795934
+      ],
+      [
+       25.9117753,
+       -24.6793918
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450129",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450130",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.911404,
+       -24.6795853
+      ],
+      [
+       25.9114891,
+       -24.6795695
+      ],
+      [
+       25.9115335,
+       -24.6797676
+      ],
+      [
+       25.9114484,
+       -24.6797833
+      ],
+      [
+       25.911404,
+       -24.6795853
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450130",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450131",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.911328,
+       -24.6793109
+      ],
+      [
+       25.9114123,
+       -24.679294
+      ],
+      [
+       25.9114607,
+       -24.6794928
+      ],
+      [
+       25.9113765,
+       -24.6795098
+      ],
+      [
+       25.911328,
+       -24.6793109
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450131",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450132",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9112452,
+       -24.6790364
+      ],
+      [
+       25.9113326,
+       -24.6790157
+      ],
+      [
+       25.9113916,
+       -24.6792213
+      ],
+      [
+       25.9113041,
+       -24.679242
+      ],
+      [
+       25.9112452,
+       -24.6790364
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450132",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450133",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9115217,
+       -24.6799573
+      ],
+      [
+       25.9116102,
+       -24.6799912
+      ],
+      [
+       25.9115449,
+       -24.680132
+      ],
+      [
+       25.9114564,
+       -24.6800981
+      ],
+      [
+       25.9115217,
+       -24.6799573
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450133",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450134",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9114009,
+       -24.6802143
+      ],
+      [
+       25.91149,
+       -24.6802491
+      ],
+      [
+       25.9114212,
+       -24.6803945
+      ],
+      [
+       25.911332,
+       -24.6803597
+      ],
+      [
+       25.9114009,
+       -24.6802143
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450134",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450135",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9120637,
+       -24.6789541
+      ],
+      [
+       25.9121466,
+       -24.6789329
+      ],
+      [
+       25.9121701,
+       -24.6790086
+      ],
+      [
+       25.9120872,
+       -24.6790298
+      ],
+      [
+       25.9120637,
+       -24.6789541
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450135",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450136",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9120958,
+       -24.6790693
+      ],
+      [
+       25.9121742,
+       -24.679039
+      ],
+      [
+       25.9122071,
+       -24.6791094
+      ],
+      [
+       25.9121287,
+       -24.6791397
+      ],
+      [
+       25.9120958,
+       -24.6790693
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450136",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450137",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9121697,
+       -24.6792341
+      ],
+      [
+       25.9122647,
+       -24.6792101
+      ],
+      [
+       25.9123038,
+       -24.6793381
+      ],
+      [
+       25.9121419,
+       -24.679379
+      ],
+      [
+       25.9121191,
+       -24.6793044
+      ],
+      [
+       25.912186,
+       -24.6792875
+      ],
+      [
+       25.9121697,
+       -24.6792341
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450137",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450138",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9121079,
+       -24.6792021
+      ],
+      [
+       25.9121487,
+       -24.6791916
+      ],
+      [
+       25.9121693,
+       -24.6792579
+      ],
+      [
+       25.9121285,
+       -24.6792684
+      ],
+      [
+       25.9121079,
+       -24.6792021
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450138",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450139",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9123249,
+       -24.6791332
+      ],
+      [
+       25.9123931,
+       -24.6791042
+      ],
+      [
+       25.9124255,
+       -24.6791671
+      ],
+      [
+       25.9123895,
+       -24.6791824
+      ],
+      [
+       25.9123731,
+       -24.6791505
+      ],
+      [
+       25.9123409,
+       -24.6791642
+      ],
+      [
+       25.9123249,
+       -24.6791332
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450139",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450140",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9121524,
+       -24.6791722
+      ],
+      [
+       25.9122306,
+       -24.679156
+      ],
+      [
+       25.9122413,
+       -24.6791983
+      ],
+      [
+       25.9121631,
+       -24.6792146
+      ],
+      [
+       25.9121524,
+       -24.6791722
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450140",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450144",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119748,
+       -24.6781478
+      ],
+      [
+       25.9120328,
+       -24.6781358
+      ],
+      [
+       25.912025,
+       -24.6781046
+      ],
+      [
+       25.9121326,
+       -24.6780823
+      ],
+      [
+       25.9121564,
+       -24.6781776
+      ],
+      [
+       25.9119908,
+       -24.6782118
+      ],
+      [
+       25.9119748,
+       -24.6781478
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450144",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450145",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119875,
+       -24.6782651
+      ],
+      [
+       25.9121588,
+       -24.6782364
+      ],
+      [
+       25.9121674,
+       -24.678279
+      ],
+      [
+       25.912146,
+       -24.6782826
+      ],
+      [
+       25.912156,
+       -24.6783321
+      ],
+      [
+       25.9120061,
+       -24.6783572
+      ],
+      [
+       25.9119875,
+       -24.6782651
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450145",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450146",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119998,
+       -24.6784102
+      ],
+      [
+       25.9121552,
+       -24.6783756
+      ],
+      [
+       25.9121794,
+       -24.6784653
+      ],
+      [
+       25.912024,
+       -24.6784999
+      ],
+      [
+       25.9119998,
+       -24.6784102
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450146",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450147",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9118663,
+       -24.6781131
+      ],
+      [
+       25.9118929,
+       -24.6782519
+      ],
+      [
+       25.9119749,
+       -24.6782389
+      ],
+      [
+       25.9119672,
+       -24.6781988
+      ],
+      [
+       25.9119186,
+       -24.6782065
+      ],
+      [
+       25.9118997,
+       -24.6781078
+      ],
+      [
+       25.9118663,
+       -24.6781131
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450147",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807450148",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119689,
+       -24.6782589
+      ],
+      [
+       25.9119012,
+       -24.6782759
+      ],
+      [
+       25.9119313,
+       -24.6783747
+      ],
+      [
+       25.9119672,
+       -24.6783656
+      ],
+      [
+       25.9119475,
+       -24.6783011
+      ],
+      [
+       25.9119794,
+       -24.6782931
+      ],
+      [
+       25.9119689,
+       -24.6782589
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807450148",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T07:46:34Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464449",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9121325,
+       -24.6785226
+      ],
+      [
+       25.9121976,
+       -24.6785137
+      ],
+      [
+       25.9122106,
+       -24.6785922
+      ],
+      [
+       25.9121455,
+       -24.6786011
+      ],
+      [
+       25.9121325,
+       -24.6785226
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464449",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464450",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.912183,
+       -24.6788763
+      ],
+      [
+       25.9122525,
+       -24.6788487
+      ],
+      [
+       25.912301,
+       -24.6789372
+      ],
+      [
+       25.9122393,
+       -24.6789705
+      ],
+      [
+       25.912183,
+       -24.6788763
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464450",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464451",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9122565,
+       -24.6789929
+      ],
+      [
+       25.9123235,
+       -24.6789602
+      ],
+      [
+       25.9123531,
+       -24.6790103
+      ],
+      [
+       25.9122862,
+       -24.679043
+      ],
+      [
+       25.9122565,
+       -24.6789929
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464451",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464452",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9123322,
+       -24.678839
+      ],
+      [
+       25.9124193,
+       -24.6788028
+      ],
+      [
+       25.9124585,
+       -24.6788806
+      ],
+      [
+       25.9123714,
+       -24.6789168
+      ],
+      [
+       25.9123322,
+       -24.678839
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464452",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464453",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9123673,
+       -24.6789346
+      ],
+      [
+       25.9124503,
+       -24.6788985
+      ],
+      [
+       25.9124796,
+       -24.6789539
+      ],
+      [
+       25.9123966,
+       -24.6789901
+      ],
+      [
+       25.9123673,
+       -24.6789346
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464453",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464454",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124442,
+       -24.6790752
+      ],
+      [
+       25.9125334,
+       -24.6790392
+      ],
+      [
+       25.9125663,
+       -24.6791064
+      ],
+      [
+       25.9125223,
+       -24.6791242
+      ],
+      [
+       25.9125051,
+       -24.6790889
+      ],
+      [
+       25.9124915,
+       -24.6790944
+      ],
+      [
+       25.9125047,
+       -24.6791214
+      ],
+      [
+       25.9124731,
+       -24.6791341
+      ],
+      [
+       25.9124442,
+       -24.6790752
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464454",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464455",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125003,
+       -24.6791699
+      ],
+      [
+       25.9125307,
+       -24.6791558
+      ],
+      [
+       25.9125668,
+       -24.6792202
+      ],
+      [
+       25.9125365,
+       -24.6792342
+      ],
+      [
+       25.9125003,
+       -24.6791699
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464455",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464456",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125366,
+       -24.6791484
+      ],
+      [
+       25.9125754,
+       -24.6791292
+      ],
+      [
+       25.9126247,
+       -24.6792115
+      ],
+      [
+       25.9125859,
+       -24.6792306
+      ],
+      [
+       25.9125366,
+       -24.6791484
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464456",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464457",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119345,
+       -24.6784294
+      ],
+      [
+       25.9119765,
+       -24.6784206
+      ],
+      [
+       25.9119987,
+       -24.6785081
+      ],
+      [
+       25.9119568,
+       -24.6785169
+      ],
+      [
+       25.9119345,
+       -24.6784294
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464457",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464458",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9120464,
+       -24.6785849
+      ],
+      [
+       25.9121226,
+       -24.6785717
+      ],
+      [
+       25.9121289,
+       -24.6786017
+      ],
+      [
+       25.9120526,
+       -24.6786149
+      ],
+      [
+       25.9120464,
+       -24.6785849
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464458",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464459",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.912029,
+       -24.6785374
+      ],
+      [
+       25.9121006,
+       -24.6785252
+      ],
+      [
+       25.9121072,
+       -24.6785576
+      ],
+      [
+       25.9120357,
+       -24.6785698
+      ],
+      [
+       25.912029,
+       -24.6785374
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464459",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464479",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124277,
+       -24.677981
+      ],
+      [
+       25.9125141,
+       -24.6779629
+      ],
+      [
+       25.912533,
+       -24.6780374
+      ],
+      [
+       25.9124466,
+       -24.6780555
+      ],
+      [
+       25.9124277,
+       -24.677981
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464479",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464481",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125887,
+       -24.6779305
+      ],
+      [
+       25.9126303,
+       -24.6779205
+      ],
+      [
+       25.9126563,
+       -24.6780102
+      ],
+      [
+       25.9125888,
+       -24.6780263
+      ],
+      [
+       25.9125722,
+       -24.6779691
+      ],
+      [
+       25.9125981,
+       -24.6779629
+      ],
+      [
+       25.9125887,
+       -24.6779305
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464481",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464482",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124083,
+       -24.6781266
+      ],
+      [
+       25.912522,
+       -24.6781059
+      ],
+      [
+       25.9125424,
+       -24.6781981
+      ],
+      [
+       25.9125138,
+       -24.6782033
+      ],
+      [
+       25.9125095,
+       -24.6781836
+      ],
+      [
+       25.9124243,
+       -24.6781991
+      ],
+      [
+       25.9124083,
+       -24.6781266
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464482",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464483",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126634,
+       -24.6780604
+      ],
+      [
+       25.9125877,
+       -24.6780759
+      ],
+      [
+       25.9126135,
+       -24.6781798
+      ],
+      [
+       25.9127246,
+       -24.678157
+      ],
+      [
+       25.9127143,
+       -24.6781156
+      ],
+      [
+       25.9126789,
+       -24.6781229
+      ],
+      [
+       25.9126634,
+       -24.6780604
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464483",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464484",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124642,
+       -24.6782518
+      ],
+      [
+       25.9125281,
+       -24.6782357
+      ],
+      [
+       25.9125471,
+       -24.6782983
+      ],
+      [
+       25.9124567,
+       -24.678321
+      ],
+      [
+       25.9124464,
+       -24.6782871
+      ],
+      [
+       25.9124729,
+       -24.6782804
+      ],
+      [
+       25.9124642,
+       -24.6782518
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464484",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464485",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125456,
+       -24.6782225
+      ],
+      [
+       25.9126271,
+       -24.6782024
+      ],
+      [
+       25.9126369,
+       -24.6782301
+      ],
+      [
+       25.9125574,
+       -24.6782534
+      ],
+      [
+       25.9125456,
+       -24.6782225
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464485",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464486",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125574,
+       -24.6782534
+      ],
+      [
+       25.9126369,
+       -24.6782301
+      ],
+      [
+       25.912652,
+       -24.6782726
+      ],
+      [
+       25.9125724,
+       -24.6782959
+      ],
+      [
+       25.9125574,
+       -24.6782534
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464486",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464487",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126486,
+       -24.6782061
+      ],
+      [
+       25.9126954,
+       -24.6781953
+      ],
+      [
+       25.9127076,
+       -24.6782391
+      ],
+      [
+       25.9126608,
+       -24.6782499
+      ],
+      [
+       25.9126486,
+       -24.6782061
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464487",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464488",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126129,
+       -24.6783666
+      ],
+      [
+       25.9126784,
+       -24.6783525
+      ],
+      [
+       25.9127011,
+       -24.6784396
+      ],
+      [
+       25.9126356,
+       -24.6784537
+      ],
+      [
+       25.9126129,
+       -24.6783666
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464488",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464489",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124878,
+       -24.6783844
+      ],
+      [
+       25.9125806,
+       -24.6783646
+      ],
+      [
+       25.9126003,
+       -24.6784411
+      ],
+      [
+       25.9125076,
+       -24.6784609
+      ],
+      [
+       25.9124878,
+       -24.6783844
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464489",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464490",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9119846,
+       -24.6785594
+      ],
+      [
+       25.9120187,
+       -24.6785541
+      ],
+      [
+       25.9120315,
+       -24.6786214
+      ],
+      [
+       25.9119974,
+       -24.6786267
+      ],
+      [
+       25.9119846,
+       -24.6785594
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464490",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464491",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127617,
+       -24.6779836
+      ],
+      [
+       25.9128535,
+       -24.6779819
+      ],
+      [
+       25.9128556,
+       -24.6780702
+      ],
+      [
+       25.9127637,
+       -24.678072
+      ],
+      [
+       25.9127617,
+       -24.6779836
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464491",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464492",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128422,
+       -24.6781006
+      ],
+      [
+       25.9127483,
+       -24.6781097
+      ],
+      [
+       25.9127603,
+       -24.6782127
+      ],
+      [
+       25.9128006,
+       -24.6782067
+      ],
+      [
+       25.9127899,
+       -24.6781311
+      ],
+      [
+       25.9128542,
+       -24.6781274
+      ],
+      [
+       25.9128422,
+       -24.6781006
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464492",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464493",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128294,
+       -24.6781413
+      ],
+      [
+       25.9129198,
+       -24.6781331
+      ],
+      [
+       25.9129255,
+       -24.6781849
+      ],
+      [
+       25.9128351,
+       -24.6781931
+      ],
+      [
+       25.9128294,
+       -24.6781413
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464493",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464494",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129247,
+       -24.6781134
+      ],
+      [
+       25.9129996,
+       -24.6781084
+      ],
+      [
+       25.9130062,
+       -24.6781915
+      ],
+      [
+       25.9129313,
+       -24.6781964
+      ],
+      [
+       25.9129247,
+       -24.6781134
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464494",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464496",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127644,
+       -24.678231
+      ],
+      [
+       25.9128194,
+       -24.6782347
+      ],
+      [
+       25.9128167,
+       -24.6782676
+      ],
+      [
+       25.9127697,
+       -24.6782664
+      ],
+      [
+       25.9127644,
+       -24.678231
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464496",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464497",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127571,
+       -24.6782891
+      ],
+      [
+       25.9128138,
+       -24.6782816
+      ],
+      [
+       25.912827,
+       -24.6783641
+      ],
+      [
+       25.9127703,
+       -24.6783716
+      ],
+      [
+       25.9127571,
+       -24.6782891
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464497",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464498",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124362,
+       -24.6787352
+      ],
+      [
+       25.9125234,
+       -24.6786988
+      ],
+      [
+       25.9125825,
+       -24.6788158
+      ],
+      [
+       25.9124954,
+       -24.6788522
+      ],
+      [
+       25.9124362,
+       -24.6787352
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464498",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464499",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125059,
+       -24.6788615
+      ],
+      [
+       25.9125792,
+       -24.6788328
+      ],
+      [
+       25.9126227,
+       -24.6789246
+      ],
+      [
+       25.9125494,
+       -24.6789533
+      ],
+      [
+       25.9125059,
+       -24.6788615
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464499",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464500",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125781,
+       -24.6786975
+      ],
+      [
+       25.9126597,
+       -24.6786645
+      ],
+      [
+       25.9127198,
+       -24.6787876
+      ],
+      [
+       25.9126383,
+       -24.6788205
+      ],
+      [
+       25.9125781,
+       -24.6786975
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464500",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464501",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126517,
+       -24.678833
+      ],
+      [
+       25.9127228,
+       -24.6788038
+      ],
+      [
+       25.9127402,
+       -24.6788342
+      ],
+      [
+       25.9126665,
+       -24.6788598
+      ],
+      [
+       25.9126517,
+       -24.678833
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464501",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464502",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.912586,
+       -24.6790048
+      ],
+      [
+       25.9126826,
+       -24.6789671
+      ],
+      [
+       25.9127235,
+       -24.6790365
+      ],
+      [
+       25.9126182,
+       -24.6790877
+      ],
+      [
+       25.9125967,
+       -24.6790475
+      ],
+      [
+       25.9126142,
+       -24.6790426
+      ],
+      [
+       25.912586,
+       -24.6790048
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464502",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464503",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127259,
+       -24.6789444
+      ],
+      [
+       25.9128221,
+       -24.678897
+      ],
+      [
+       25.9128702,
+       -24.6789775
+      ],
+      [
+       25.9128115,
+       -24.6790065
+      ],
+      [
+       25.9127779,
+       -24.6789503
+      ],
+      [
+       25.9127404,
+       -24.6789688
+      ],
+      [
+       25.9127259,
+       -24.6789444
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464503",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464504",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128274,
+       -24.6790134
+      ],
+      [
+       25.9128709,
+       -24.6789909
+      ],
+      [
+       25.9129025,
+       -24.6790414
+      ],
+      [
+       25.9128596,
+       -24.6790646
+      ],
+      [
+       25.9128274,
+       -24.6790134
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464504",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464505",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129022,
+       -24.6789901
+      ],
+      [
+       25.9129828,
+       -24.6789552
+      ],
+      [
+       25.9130202,
+       -24.6790263
+      ],
+      [
+       25.9129395,
+       -24.6790612
+      ],
+      [
+       25.9129022,
+       -24.6789901
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464505",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464506",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127878,
+       -24.6788015
+      ],
+      [
+       25.9128758,
+       -24.6787662
+      ],
+      [
+       25.9128912,
+       -24.6787978
+      ],
+      [
+       25.9128032,
+       -24.6788332
+      ],
+      [
+       25.9127878,
+       -24.6788015
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464506",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464507",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127014,
+       -24.6786311
+      ],
+      [
+       25.9127823,
+       -24.6785939
+      ],
+      [
+       25.9128606,
+       -24.6787346
+      ],
+      [
+       25.9127797,
+       -24.6787718
+      ],
+      [
+       25.9127014,
+       -24.6786311
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464507",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464573",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129986,
+       -24.6794991
+      ],
+      [
+       25.9130668,
+       -24.67947
+      ],
+      [
+       25.9130834,
+       -24.679502
+      ],
+      [
+       25.9130152,
+       -24.6795312
+      ],
+      [
+       25.9129986,
+       -24.6794991
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464573",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464574",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127842,
+       -24.6794064
+      ],
+      [
+       25.9128714,
+       -24.6793652
+      ],
+      [
+       25.9129411,
+       -24.6794868
+      ],
+      [
+       25.912854,
+       -24.6795281
+      ],
+      [
+       25.9127842,
+       -24.6794064
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464574",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464575",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128998,
+       -24.6795507
+      ],
+      [
+       25.9129547,
+       -24.6795241
+      ],
+      [
+       25.9129696,
+       -24.6795495
+      ],
+      [
+       25.9129147,
+       -24.6795761
+      ],
+      [
+       25.9128998,
+       -24.6795507
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464575",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464576",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126245,
+       -24.6794572
+      ],
+      [
+       25.9127166,
+       -24.6794173
+      ],
+      [
+       25.9127778,
+       -24.6795339
+      ],
+      [
+       25.9126857,
+       -24.6795738
+      ],
+      [
+       25.9126245,
+       -24.6794572
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464576",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464577",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124358,
+       -24.6795427
+      ],
+      [
+       25.9125924,
+       -24.6794838
+      ],
+      [
+       25.9126356,
+       -24.6795785
+      ],
+      [
+       25.9124789,
+       -24.6796374
+      ],
+      [
+       25.9124358,
+       -24.6795427
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464577",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464578",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126017,
+       -24.6796006
+      ],
+      [
+       25.9126309,
+       -24.6796556
+      ],
+      [
+       25.9125889,
+       -24.6796741
+      ],
+      [
+       25.9126125,
+       -24.6797186
+      ],
+      [
+       25.9127031,
+       -24.6796789
+      ],
+      [
+       25.9126502,
+       -24.6795793
+      ],
+      [
+       25.9126017,
+       -24.6796006
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464578",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464579",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125002,
+       -24.6796885
+      ],
+      [
+       25.9125619,
+       -24.6796641
+      ],
+      [
+       25.91259,
+       -24.6797226
+      ],
+      [
+       25.9125404,
+       -24.6797458
+      ],
+      [
+       25.9125002,
+       -24.6796885
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464579",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464580",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124472,
+       -24.6797375
+      ],
+      [
+       25.9125007,
+       -24.6797166
+      ],
+      [
+       25.9125253,
+       -24.6797685
+      ],
+      [
+       25.9124718,
+       -24.6797894
+      ],
+      [
+       25.9124472,
+       -24.6797375
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464580",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464581",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9122425,
+       -24.6796721
+      ],
+      [
+       25.912366,
+       -24.679649
+      ],
+      [
+       25.9123895,
+       -24.679753
+      ],
+      [
+       25.9122661,
+       -24.6797761
+      ],
+      [
+       25.9122425,
+       -24.6796721
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464581",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464582",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9123568,
+       -24.6799118
+      ],
+      [
+       25.9124543,
+       -24.6799012
+      ],
+      [
+       25.9124653,
+       -24.6799844
+      ],
+      [
+       25.9123678,
+       -24.6799951
+      ],
+      [
+       25.9123568,
+       -24.6799118
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464582",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464583",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125485,
+       -24.6799164
+      ],
+      [
+       25.9126289,
+       -24.6798798
+      ],
+      [
+       25.9126692,
+       -24.6799614
+      ],
+      [
+       25.9125941,
+       -24.6799992
+      ],
+      [
+       25.9125485,
+       -24.6799164
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464583",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464584",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126163,
+       -24.6797582
+      ],
+      [
+       25.9127375,
+       -24.6797019
+      ],
+      [
+       25.9127667,
+       -24.6797538
+      ],
+      [
+       25.9126455,
+       -24.6798101
+      ],
+      [
+       25.9126163,
+       -24.6797582
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464584",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464585",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126629,
+       -24.6798233
+      ],
+      [
+       25.9127127,
+       -24.6798007
+      ],
+      [
+       25.9127285,
+       -24.6798295
+      ],
+      [
+       25.9127461,
+       -24.6798216
+      ],
+      [
+       25.91277,
+       -24.6798651
+      ],
+      [
+       25.9127982,
+       -24.6798523
+      ],
+      [
+       25.9128247,
+       -24.6799006
+      ],
+      [
+       25.912792,
+       -24.6799154
+      ],
+      [
+       25.9127858,
+       -24.6799041
+      ],
+      [
+       25.9127532,
+       -24.6799189
+      ],
+      [
+       25.9127644,
+       -24.6799392
+      ],
+      [
+       25.9127341,
+       -24.6799529
+      ],
+      [
+       25.9126629,
+       -24.6798233
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464585",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464586",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127896,
+       -24.6797513
+      ],
+      [
+       25.9128885,
+       -24.6797047
+      ],
+      [
+       25.9129675,
+       -24.6798434
+      ],
+      [
+       25.9129268,
+       -24.6798625
+      ],
+      [
+       25.9128726,
+       -24.6797673
+      ],
+      [
+       25.9128144,
+       -24.6797947
+      ],
+      [
+       25.9127896,
+       -24.6797513
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464586",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464587",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128845,
+       -24.6796416
+      ],
+      [
+       25.9130024,
+       -24.6795864
+      ],
+      [
+       25.9130341,
+       -24.6796423
+      ],
+      [
+       25.9129946,
+       -24.6796608
+      ],
+      [
+       25.9129776,
+       -24.6796309
+      ],
+      [
+       25.9128992,
+       -24.6796676
+      ],
+      [
+       25.9128845,
+       -24.6796416
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464587",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464590",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129259,
+       -24.6797118
+      ],
+      [
+       25.9130034,
+       -24.6796751
+      ],
+      [
+       25.9130203,
+       -24.6797047
+      ],
+      [
+       25.9130503,
+       -24.6796905
+      ],
+      [
+       25.9130937,
+       -24.6797662
+      ],
+      [
+       25.9129862,
+       -24.679817
+      ],
+      [
+       25.9129259,
+       -24.6797118
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464590",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464599",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124098,
+       -24.6803716
+      ],
+      [
+       25.9124458,
+       -24.6803636
+      ],
+      [
+       25.9124798,
+       -24.6804892
+      ],
+      [
+       25.9124438,
+       -24.6804973
+      ],
+      [
+       25.9124098,
+       -24.6803716
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464599",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464600",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9124634,
+       -24.680326
+      ],
+      [
+       25.9125742,
+       -24.680285
+      ],
+      [
+       25.9126426,
+       -24.6804379
+      ],
+      [
+       25.9125981,
+       -24.6804543
+      ],
+      [
+       25.9125839,
+       -24.6804227
+      ],
+      [
+       25.9125641,
+       -24.68043
+      ],
+      [
+       25.9125767,
+       -24.6804581
+      ],
+      [
+       25.9125302,
+       -24.6804753
+      ],
+      [
+       25.9124634,
+       -24.680326
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464600",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464601",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126753,
+       -24.6802154
+      ],
+      [
+       25.9127426,
+       -24.6801919
+      ],
+      [
+       25.912761,
+       -24.6802356
+      ],
+      [
+       25.9126938,
+       -24.6802591
+      ],
+      [
+       25.9126753,
+       -24.6802154
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464601",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464602",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9126326,
+       -24.6802905
+      ],
+      [
+       25.912685,
+       -24.6802794
+      ],
+      [
+       25.9127301,
+       -24.6803988
+      ],
+      [
+       25.9126894,
+       -24.6804142
+      ],
+      [
+       25.9126326,
+       -24.6802905
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464602",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464603",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.912685,
+       -24.6802794
+      ],
+      [
+       25.9127393,
+       -24.6802591
+      ],
+      [
+       25.9127493,
+       -24.6802668
+      ],
+      [
+       25.9127948,
+       -24.680382
+      ],
+      [
+       25.9127405,
+       -24.6804023
+      ],
+      [
+       25.912685,
+       -24.6802794
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464603",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464604",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127493,
+       -24.6802668
+      ],
+      [
+       25.9127999,
+       -24.6802444
+      ],
+      [
+       25.9128456,
+       -24.6803298
+      ],
+      [
+       25.912795,
+       -24.6803522
+      ],
+      [
+       25.9127493,
+       -24.6802668
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464604",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464605",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128107,
+       -24.6801102
+      ],
+      [
+       25.9128506,
+       -24.6800908
+      ],
+      [
+       25.912868,
+       -24.6801203
+      ],
+      [
+       25.9128281,
+       -24.6801397
+      ],
+      [
+       25.9128107,
+       -24.6801102
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464605",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464606",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129571,
+       -24.6802397
+      ],
+      [
+       25.9129845,
+       -24.6802266
+      ],
+      [
+       25.9130225,
+       -24.6802923
+      ],
+      [
+       25.9130024,
+       -24.6803179
+      ],
+      [
+       25.9129571,
+       -24.6802397
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464606",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464607",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128817,
+       -24.6803508
+      ],
+      [
+       25.9129855,
+       -24.6803221
+      ],
+      [
+       25.9129938,
+       -24.6803469
+      ],
+      [
+       25.9129005,
+       -24.6803727
+      ],
+      [
+       25.9128817,
+       -24.6803508
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464607",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464608",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9130203,
+       -24.6800142
+      ],
+      [
+       25.9129676,
+       -24.6800406
+      ],
+      [
+       25.9129978,
+       -24.6800907
+      ],
+      [
+       25.9129716,
+       -24.6801038
+      ],
+      [
+       25.9130376,
+       -24.6802129
+      ],
+      [
+       25.9131167,
+       -24.6801734
+      ],
+      [
+       25.9130203,
+       -24.6800142
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464608",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464611",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9128587,
+       -24.680298
+      ],
+      [
+       25.9128832,
+       -24.6802898
+      ],
+      [
+       25.9129017,
+       -24.6803354
+      ],
+      [
+       25.9128772,
+       -24.6803436
+      ],
+      [
+       25.9128587,
+       -24.680298
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464611",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464620",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125108,
+       -24.6805508
+      ],
+      [
+       25.9125798,
+       -24.6805432
+      ],
+      [
+       25.9125841,
+       -24.6805761
+      ],
+      [
+       25.912552,
+       -24.6805823
+      ],
+      [
+       25.9125146,
+       -24.6805832
+      ],
+      [
+       25.9125108,
+       -24.6805508
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464620",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464621",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125146,
+       -24.6805832
+      ],
+      [
+       25.912552,
+       -24.6805823
+      ],
+      [
+       25.9125546,
+       -24.6806689
+      ],
+      [
+       25.9125173,
+       -24.6806699
+      ],
+      [
+       25.9125146,
+       -24.6805832
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464621",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464622",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9125923,
+       -24.6805483
+      ],
+      [
+       25.9126784,
+       -24.6805347
+      ],
+      [
+       25.9126936,
+       -24.6806142
+      ],
+      [
+       25.9126074,
+       -24.6806278
+      ],
+      [
+       25.9125923,
+       -24.6805483
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464622",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464623",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127114,
+       -24.6804901
+      ],
+      [
+       25.9127459,
+       -24.6804835
+      ],
+      [
+       25.9127647,
+       -24.6805647
+      ],
+      [
+       25.9127302,
+       -24.6805713
+      ],
+      [
+       25.9127114,
+       -24.6804901
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464623",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464624",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127623,
+       -24.6804289
+      ],
+      [
+       25.9128718,
+       -24.6804202
+      ],
+      [
+       25.9128749,
+       -24.6804521
+      ],
+      [
+       25.9128,
+       -24.6804581
+      ],
+      [
+       25.9128022,
+       -24.6804811
+      ],
+      [
+       25.9127675,
+       -24.6804838
+      ],
+      [
+       25.9127623,
+       -24.6804289
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464624",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464625",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129014,
+       -24.6803909
+      ],
+      [
+       25.9130411,
+       -24.6803465
+      ],
+      [
+       25.9130664,
+       -24.6804123
+      ],
+      [
+       25.9130153,
+       -24.6804285
+      ],
+      [
+       25.9130025,
+       -24.6803953
+      ],
+      [
+       25.912914,
+       -24.6804235
+      ],
+      [
+       25.9129014,
+       -24.6803909
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464625",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807464626",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9129372,
+       -24.6804432
+      ],
+      [
+       25.9130586,
+       -24.6804235
+      ],
+      [
+       25.9130798,
+       -24.6805313
+      ],
+      [
+       25.9129584,
+       -24.680551
+      ],
+      [
+       25.9129372,
+       -24.6804432
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807464626",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T08:59:46Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "way/807568659",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       25.9127145,
+       -24.6795811
+      ],
+      [
+       25.9127415,
+       -24.6796404
+      ],
+      [
+       25.912794,
+       -24.6796207
+      ],
+      [
+       25.9127766,
+       -24.6795825
+      ],
+      [
+       25.9127498,
+       -24.6795926
+      ],
+      [
+       25.9127402,
+       -24.6795714
+      ],
+      [
+       25.9127145,
+       -24.6795811
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "source_id": "way/807568659",
+    "source_version": "1",
+    "source_timestamp": "2020-05-23T16:10:44Z",
+    "building": "yes",
+    "height_m": null,
+    "levels": null,
+    "height_raw": null,
+    "synthetic": false
+   }
+  }
+ ],
+ "provenance": {
+  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=25.910,-24.681,25.913,-24.678",
+  "retrieved": "2026-10-02",
+  "crs": "OGC:CRS84",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "sha256_source": "f414d09ff051dca1c2a2bf5c76418a3743800cc9a860fc456f358fdde3883fbc",
+  "processing": "Closed building ways only; retain source IDs/version/time and height tags; omit contributor identities; no completeness claim"
+ }
+}

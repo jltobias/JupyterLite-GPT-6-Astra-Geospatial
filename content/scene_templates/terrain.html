@@ -2,21 +2,34 @@
 <header><div class="eyebrow">URBAN TWIN LAB / 16 / PLOTLY</div><h1>Terrain, water and visual exaggeration</h1><p>A synthetic elevation surface in local metres. Water is a horizontal screening plane, not a hydraulic simulation.</p></header>
 <div class="controls"><label>Water level (m) <input id="water" type="range" min="998" max="1008" step=".5" value="1001"><output id="level">1001</output></label>
 <label>Vertical exaggeration <input id="exaggeration" type="range" min="1" max="60" step="1" value="30"><output id="factor">30×</output></label><button id="reset">Reset camera</button></div>
+<div class="controls"><label>Cross-section row <input id="row" type="range" min="0" max="39" step="1" value="16"><output id="row-label">16</output></label></div>
 <div id="view" aria-label="Interactive terrain and water surface"></div><div id="status" role="status">Loading Plotly; requires internet and WebGL.</div>
+<div id="profile" style="height:240px" aria-label="Elevation cross-section in real metres"></div>
 <details><summary>Numerical interpretation</summary><p id="summary"></p><p>Every array element represents one 50 m × 50 m cell sampled at its center. Threshold area sums cells whose centers are below the water level. It ignores hydraulic connectivity and partial-cell inundation. Gray/blue perspective and occlusion do not replace this calculation. Axis labels and hover values preserve unexaggerated elevations.</p></details>
 <footer>Drag to orbit; scroll to zoom; hover for coordinates and elevation. Synthetic datum, not a surveyed vertical reference. Data: original synthetic fixtures, MIT. <a href="https://plotly.com/javascript/">Plotly.js</a> 3.1.0 (MIT). No terrain tiles.</footer>
-<script>const DATA=__DATA__;window.sceneData=DATA;const status=document.querySelector('#status');</script>
+<script>const DATA=__DATA__;window.sceneData=DATA;const status=document.querySelector('#status');
+if(DATA.title)document.querySelector('h1').textContent=DATA.title;
+if(DATA.description)document.querySelector('header p').textContent=DATA.description;
+if(DATA.attribution){document.querySelector('footer').textContent=DATA.attribution+' · relative elevations; vertical datum not independently verified · Plotly.js 3.1.0 (MIT)';document.querySelector('details p:last-child').textContent='Approximate sample area from the source tile footprint; partial-cell and hydraulic connectivity effects are excluded. Hover and cross-section preserve real metre values.';}
+</script>
 <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" onerror="status.textContent='Plotly download failed; use the notebook static plot.'"></script>
 <script>
 try {
 const view=document.querySelector('#view'),camera={eye:{x:1.5,y:-1.7,z:1.1}};
-const terrain={type:'surface',x:DATA.x,y:DATA.y,z:DATA.z,colorscale:'Earth',cmin:995,cmax:1012,colorbar:{title:{text:'Elevation (m)'},len:.75},name:'Synthetic terrain',hovertemplate:'East %{x} m<br>North %{y} m<br>Elevation %{z:.2f} m<extra></extra>'};
+const zmin=DATA.relative?0:995,zmax=DATA.relative?Math.ceil(Math.max(...DATA.z.flat())):1012,span=zmax-zmin;
+const xspan=DATA.x.at(-1)-DATA.x[0],yspan=DATA.y.at(-1)-DATA.y[0],initialLevel=DATA.relative?Math.min(10,zmax):1001;
+const water=document.querySelector('#water');if(DATA.relative){water.min=0;water.max=zmax;water.value=initialLevel;}
+document.querySelector('#row').max=DATA.y.length-1;
+const terrain={type:'surface',x:DATA.x,y:DATA.y,z:DATA.z,colorscale:'Earth',cmin:zmin,cmax:zmax,colorbar:{title:{text:DATA.relative?'Above minimum (m)':'Elevation (m)'},len:.75},name:'Terrain',hovertemplate:'East %{x} m<br>North %{y} m<br>Elevation %{z:.2f} m<extra></extra>'};
 function waterTrace(level){return {type:'surface',x:DATA.x,y:DATA.y,z:DATA.z.map(row=>row.map(()=>level)),showscale:false,colorscale:[[0,'#3c91c9'],[1,'#3c91c9']],opacity:.45,name:'Water screening plane',hoverinfo:'skip'}}
 function summarize(level,factor){const below=DATA.z.flat().filter(v=>v<level).length,area=below*DATA.pixel_m**2;document.querySelector('#level').textContent=level;document.querySelector('#factor').textContent=factor+'×';document.querySelector('#summary').textContent=`${below} of ${DATA.z.flat().length} cells below ${level} m; screening area ${area.toLocaleString()} m².`;status.textContent=`Vertical exaggeration ${factor}× · below-plane area ${area.toLocaleString()} m² · not a flood forecast`;window.sceneState={level,factor,area}}
-const layout={margin:{l:0,r:0,t:5,b:0},paper_bgcolor:'#edf2f4',uirevision:'keep-camera',scene:{xaxis:{title:{text:'Local east (m)'},range:[0,2000]},yaxis:{title:{text:'Local north (m)'},range:[0,2000]},zaxis:{title:{text:'Elevation (m)'},range:[995,1012]},aspectmode:'manual',aspectratio:{x:1,y:1,z:17/2000*30},camera}};
-Plotly.newPlot(view,[terrain,waterTrace(1001)],layout,{responsive:true,displaylogo:false}).then(()=>{window.sceneReady=true;summarize(1001,30)});
+const layout={margin:{l:0,r:0,t:5,b:0},paper_bgcolor:'#edf2f4',uirevision:'keep-camera',scene:{xaxis:{title:{text:'Local east (m)'},range:[DATA.x[0],DATA.x.at(-1)]},yaxis:{title:{text:'Local north (m)'},range:[DATA.y[0],DATA.y.at(-1)]},zaxis:{title:{text:DATA.relative?'Above minimum (m)':'Elevation (m)'},range:[zmin,zmax],nticks:5},aspectmode:'manual',aspectratio:{x:1,y:yspan/xspan,z:span/xspan*30},camera}};
+function profileTrace(row){return {type:'scatter3d',mode:'lines',x:DATA.x,y:DATA.x.map(()=>DATA.y[row]),z:DATA.z[row].map(v=>v+.05),line:{color:'#d23a56',width:6},name:'Selected cross-section'}}
+function updateProfile(){const row=Number(document.querySelector('#row').value);document.querySelector('#row-label').textContent=row;Plotly.restyle(view,{x:[DATA.x],y:[DATA.x.map(()=>DATA.y[row])],z:[DATA.z[row].map(v=>v+.05)]},[2]);Plotly.react('profile',[{x:DATA.x,y:DATA.z[row],type:'scatter',mode:'lines',line:{color:'#087f8c'}}],{margin:{t:30,l:65,r:20,b:50},title:{text:'Cross-section: unexaggerated elevation'},xaxis:{title:{text:'Local east (m)'}},yaxis:{title:{text:'Elevation (m)'},range:[zmin,zmax]}},{responsive:true,displaylogo:false});window.profileRow=row}
+Plotly.newPlot(view,[terrain,waterTrace(initialLevel),profileTrace(16)],layout,{responsive:true,displaylogo:false}).then(()=>{summarize(initialLevel,30);updateProfile();window.sceneReady=true});
 document.querySelector('#water').oninput=()=>{const level=Number(document.querySelector('#water').value),factor=Number(document.querySelector('#exaggeration').value);Plotly.restyle(view,{z:[waterTrace(level).z]},[1]);summarize(level,factor)};
-document.querySelector('#exaggeration').oninput=()=>{const level=Number(document.querySelector('#water').value),factor=Number(document.querySelector('#exaggeration').value);Plotly.relayout(view,{'scene.aspectratio':{x:1,y:1,z:17/2000*factor}});summarize(level,factor)};
+document.querySelector('#exaggeration').oninput=()=>{const level=Number(document.querySelector('#water').value),factor=Number(document.querySelector('#exaggeration').value);Plotly.relayout(view,{'scene.aspectratio':{x:1,y:yspan/xspan,z:span/xspan*factor}});summarize(level,factor)};
+document.querySelector('#row').oninput=updateProfile;
 document.querySelector('#reset').onclick=()=>Plotly.relayout(view,{'scene.camera':camera});
 } catch(error){status.textContent='3D scene unavailable: '+error.message+'. Use the notebook static plot.'}
 </script></html>

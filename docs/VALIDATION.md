@@ -1,5 +1,21 @@
 # Validation record
 
+## Implemented notebook extensions — October 2, 2026
+
+Expanded all sixteen existing notebooks in place; no notebooks were added in this revision. Each now has a four-branch concept map, a runnable investigation, spatial comparison graphics, evidence-only prompt/image exports, and a scored-response workflow that defaults to **NOT RUN**. The original implementation briefs remain as review criteria. See the teaching guide for the investigation-by-notebook inventory.
+
+Selected investigations now use three small public-data extracts: 125 OSM footprints, a 64 × 64 Sentinel-2 red/NIR/SCL chip, and a 32 × 32 terrain chip. Source IDs, processing, units, dates and attribution accompany the data. Synthetic population and policy scenarios remain labeled; missing OSM heights remain unknown, artificial clouds are identified, and terrain screening uses relative elevations with a datum caveat.
+
+Validation for this revision:
+
+- Seventeen numerical/contract test methods pass, covering geometry defects, greedy capacity assignment, disconnected demand, timestamp order, polygon holes/boundaries, no-wrap shifts, spatial-index boundaries and real-data schemas, alongside the existing core checks.
+- All sixteen expanded notebooks execute on desktop with the required WASM kernel. Each produces at least three static graphics and leaves the model trial marked NOT RUN.
+- All sixteen execute in JupyterLite/Pyodide through installed Chrome, including rendered-feature checks for the embedded MapLibre scene. Focused reruns cover subsequent numerical and figure-label refinements.
+- Five interactive scenes pass standalone and iframe tests: synthetic buildings, real footprints, deck.gl access/trips, synthetic terrain and real terrain. Checks cover filtering, visible/full population totals, active timestamped trips, preserved terrain values and selected cross-section rows.
+- JupyterLite builds with the helper modules and bundled data. JupyterBook builds with warnings treated as errors. Static comparison figures, concept maps and scene screenshots were visually inspected; color scales and raster tick labels were refined for readability.
+
+Reports and screenshots remain in ignored `test-results/`. Browser tests use `BROWSER_EXECUTABLE` to select installed Chrome because the local Playwright download has a certificate-chain issue. No live Astra responses, paid API calls, Rust source changes, real-world outcome validation or fully offline deployment tests were performed in this revision. The checks establish executable teaching examples, not measured model capability or operational GIS accuracy.
+
 ## Teaching and 3D expansion — October 2, 2026
 
 Reviewed baseline commit `31d70bb`, matching the remote HEAD at the start of this work. The existing numerical examples, explicit synthetic provenance, Rust parity checks and independent notebook execution were useful foundations. The main gaps were short model activities without a complete teaching workflow, one fixed spatial evaluation case, fixed ten-notebook test counts, and no interactive 3D scene beyond Matplotlib massing.

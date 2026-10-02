@@ -57,12 +57,15 @@ date, interface, tools and prompt. A task with a supplied result tests interpret
 **Copyable Astra prompt:**
 > {prompt}
 
-**Copyable Codex task:**
+**Implementation brief — review the runnable extension below:**
 > {coding} Edit the authoring source in `scripts/make_notebooks.py` (or
 > `scripts/teaching_labs.py` for labs 11–13), regenerate the notebooks and preserve browser compatibility.
 > Use NumPy, Matplotlib and the standard library. Include a small reference case that can be checked by hand.
 
 **Acceptance evidence:** {criteria}
+
+The extended investigation later in this notebook implements this line of work with maps and checks.
+Use the brief to review the implementation or ask Codex for a further controlled variation.
 
 **Share back:** save your original prediction, changed parameter, result, model response and one limitation.
 Download the edited notebook and exports. If you have no model access, exchange explanations with a partner

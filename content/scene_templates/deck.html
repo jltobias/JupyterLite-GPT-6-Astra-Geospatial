@@ -2,11 +2,12 @@
 <header><div class="eyebrow">URBAN TWIN LAB / 15 / DECK.GL</div><h1>One city, two access scenarios</h1><p>Extruded polygons show building heights or a population chart. Color shows walking minutes.</p></header>
 <div class="controls"><label>Scenario <select id="scenario"><option value="baseline">Existing clinic</option><option value="improved">Additional clinic</option></select></label>
 <label>Extrusion <select id="metric"><option value="height">Physical building height</option><option value="population">Population (3 display metres/person)</option></select></label><button id="reset">Reset camera</button></div>
+<div class="controls"><label>Minimum residents <input id="population" type="range" min="0" max="1000" value="0"><output id="cutoff">0</output></label><label>Color <select id="color"><option value="minutes">Walking minutes</option><option value="served">Served within 15 min</option></select></label><label>Trip time (min) <input id="time" type="range" min="0" max="90" step=".5" value="18"><output id="clock">18</output></label></div>
 <div id="view" aria-label="Interactive deck.gl map"></div><div id="status" role="status">Loading deck.gl; requires internet and WebGL.</div>
-<details><summary>Accessible data table and fixed color scale</summary><p>Teal: 0 minutes → orange: 30 minutes or more. Height mode uses metres; population mode is a thematic chart, not physical height.</p><div class="table-scroll"><table><thead><tr><th>ID</th><th>Height (m)</th><th>Residents</th><th>Before (min)</th><th>After (min)</th></tr></thead><tbody id="rows"></tbody></table></div></details>
+<details><summary>Accessible data table and active color scale</summary><p id="legend">Teal: 0 minutes → orange: 30 minutes or more.</p><p>Height mode uses metres; population mode is a thematic chart, not physical height. Magenta markers follow timestamped synthetic street trips.</p><div class="table-scroll"><table><thead><tr><th>ID</th><th>Height (m)</th><th>Residents</th><th>Before (min)</th><th>After (min)</th></tr></thead><tbody id="rows"></tbody></table></div></details>
 <footer>Drag to pan; Shift-drag to rotate/tilt; scroll to zoom; hover for raw values. Black marker: existing clinic; yellow: additional clinic (scenario only). No tiles. Data: original synthetic fixtures, MIT. <a href="https://deck.gl/">deck.gl</a> 9.1.14 (MIT).</footer>
 <script>const DATA=__DATA__;window.sceneData=DATA;const status=document.querySelector('#status');
-for(const p of DATA.buildings){const tr=document.createElement('tr');for(const v of [p.id,p.height_m,p.population,p.baseline.toFixed(2),p.improved.toFixed(2)]){const td=document.createElement('td');td.textContent=v;tr.append(td)}document.querySelector('#rows').append(tr)}
+function table(rows){document.querySelector('#rows').replaceChildren();for(const p of rows){const tr=document.createElement('tr');for(const v of [p.id,p.height_m,p.population,p.baseline.toFixed(2),p.improved.toFixed(2)]){const td=document.createElement('td');td.textContent=v;tr.append(td)}document.querySelector('#rows').append(tr)}}
 window.addEventListener('error',()=>{status.textContent='Renderer unavailable; use the data table and notebook plot.'});
 </script><script src="https://unpkg.com/deck.gl@9.1.14/dist.min.js" onerror="status.textContent='deck.gl download failed; use the table or static notebook plot.'"></script>
 <script>
@@ -15,16 +16,24 @@ const initial={longitude:DATA.center[0],latitude:DATA.center[1],zoom:15.3,pitch:
 let viewer;const color=t=>{const f=Math.max(0,Math.min(1,t/30));return [Math.round(8+212*f),Math.round(127+22*f),Math.round(140-102*f),235]};
 function update(){
  const scenario=document.querySelector('#scenario').value,metric=document.querySelector('#metric').value;
+ const cutoff=Number(document.querySelector('#population').value),colorMode=document.querySelector('#color').value,clock=Number(document.querySelector('#time').value);
+ const visible=DATA.buildings.filter(d=>d.population>=cutoff),visiblePopulation=visible.reduce((n,d)=>n+d.population,0),totalPopulation=DATA.buildings.reduce((n,d)=>n+d.population,0);table(visible);
+ document.querySelector('#cutoff').textContent=cutoff;document.querySelector('#clock').textContent=clock;
+ document.querySelector('#legend').textContent=colorMode==='served'?'Teal: ≤15 min; orange: >15 min. Eligibility before capacity.':'Teal: 0 min → orange: ≥30 min; fixed across scenarios.';
+ const active=[];for(const trip of DATA.trips||[]){const t=trip.timestamps_min;if(clock<t[0]||clock>t[t.length-1])continue;let i=0;while(i<t.length-2&&t[i+1]<clock)i++;const f=(clock-t[i])/(t[i+1]-t[i]);active.push({trip:trip.id,position:trip.path[i].map((v,k)=>v+(trip.path[i+1][k]-v)*f)})}
  const layers=[new deck.PathLayer({id:'streets',data:DATA.roads,getPath:d=>d,getColor:[155,175,185],getWidth:4,widthMinPixels:1}),
- new deck.PolygonLayer({id:'buildings',data:DATA.buildings,getPolygon:d=>d.polygon,extruded:true,wireframe:true,pickable:true,
- getElevation:d=>metric==='height'?d.height_m:d.population*3,getFillColor:d=>color(d[scenario]),getLineColor:[45,68,76],
- updateTriggers:{getElevation:metric,getFillColor:scenario}}),
+ new deck.PolygonLayer({id:'buildings',data:visible,getPolygon:d=>d.polygon,extruded:true,wireframe:true,pickable:true,
+ getElevation:d=>metric==='height'?d.height_m:d.population*3,getFillColor:d=>colorMode==='served'?(d[scenario]<=15?[8,127,140]:[220,149,38]):color(d[scenario]),getLineColor:[45,68,76],
+ updateTriggers:{getElevation:metric,getFillColor:[scenario,colorMode]}}),
  new deck.ScatterplotLayer({id:'clinics',data:scenario==='baseline'?DATA.clinics.slice(0,1):DATA.clinics,getPosition:d=>d.position,getRadius:35,getFillColor:d=>d.added?[245,185,30]:[20,30,40],pickable:true})];
- viewer.setProps({layers,getTooltip:({object})=>object?{text:object.id?`${object.id}\n${object.height_m} m physical height\n${object.population} residents\n${object[scenario].toFixed(2)} walking minutes`:(object.added?'Additional clinic':'Existing clinic')}:null});
- window.sceneState={scenario,metric};status.textContent=(scenario==='baseline'?'Existing clinic':'With additional clinic')+' · '+(metric==='height'?'Physical height in metres':'THEMATIC population extrusion: 3 display metres/person')+' · color scale fixed at 0–30 min';
+ layers.push(new deck.PathLayer({id:'trip-paths',data:DATA.trips||[],getPath:d=>d.path,getColor:[140,30,145,90],getWidth:2,widthMinPixels:1}));
+ layers.push(new deck.ScatterplotLayer({id:'trip-markers',data:active,getPosition:d=>d.position,getRadius:24,getFillColor:[190,25,165],pickable:true}));
+ viewer.setProps({layers,getTooltip:({object})=>object?{text:object.trip?object.trip+' · '+clock+' min':object.id?`${object.id}\n${object.height_m} m physical height\n${object.population} residents\n${object[scenario].toFixed(2)} walking minutes`:(object.added?'Additional clinic':'Existing clinic')}:null});
+ window.sceneState={scenario,metric,cutoff,colorMode,clock,visiblePopulation,totalPopulation,activeTrips:active.length};status.textContent=visiblePopulation+' / '+totalPopulation+' residents visible · '+(metric==='height'?'Physical height (m)':'THEMATIC: 3 display m/person')+' · '+active.length+' active trips';
 }
 viewer=new deck.DeckGL({container:'view',initialViewState:initial,controller:true,layers:[],onLoad:()=>{window.sceneReady=true},onError:error=>{status.textContent='deck.gl error: '+error.message}});window.sceneDeck=viewer;
 update();document.querySelector('#scenario').onchange=update;document.querySelector('#metric').onchange=update;
+document.querySelector('#population').oninput=update;document.querySelector('#color').onchange=update;document.querySelector('#time').oninput=update;
 document.querySelector('#reset').onclick=()=>viewer.setProps({initialViewState:{...initial}});
 } catch(error){status.textContent='WebGL scene unavailable: '+error.message+'. Use the table or notebook plot.'}
 </script></html>
