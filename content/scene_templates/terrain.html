@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrain and water · Plotly</title><style>__STYLE__</style>
+<header><div class="eyebrow">URBAN TWIN LAB / 16 / PLOTLY</div><h1>Terrain, water and visual exaggeration</h1><p>A synthetic elevation surface in local metres. Water is a horizontal screening plane, not a hydraulic simulation.</p></header>
+<div class="controls"><label>Water level (m) <input id="water" type="range" min="998" max="1008" step=".5" value="1001"><output id="level">1001</output></label>
+<label>Vertical exaggeration <input id="exaggeration" type="range" min="1" max="60" step="1" value="30"><output id="factor">30×</output></label><button id="reset">Reset camera</button></div>
+<div id="view" aria-label="Interactive terrain and water surface"></div><div id="status" role="status">Loading Plotly; requires internet and WebGL.</div>
+<details><summary>Numerical interpretation</summary><p id="summary"></p><p>Every array element represents one 50 m × 50 m cell sampled at its center. Threshold area sums cells whose centers are below the water level. It ignores hydraulic connectivity and partial-cell inundation. Gray/blue perspective and occlusion do not replace this calculation. Axis labels and hover values preserve unexaggerated elevations.</p></details>
+<footer>Drag to orbit; scroll to zoom; hover for coordinates and elevation. Synthetic datum, not a surveyed vertical reference. Data: original synthetic fixtures, MIT. <a href="https://plotly.com/javascript/">Plotly.js</a> 3.1.0 (MIT). No terrain tiles.</footer>
+<script>const DATA=__DATA__;window.sceneData=DATA;const status=document.querySelector('#status');</script>
+<script src="https://cdn.plot.ly/plotly-3.1.0.min.js" onerror="status.textContent='Plotly download failed; use the notebook static plot.'"></script>
+<script>
+try {
+const view=document.querySelector('#view'),camera={eye:{x:1.5,y:-1.7,z:1.1}};
+const terrain={type:'surface',x:DATA.x,y:DATA.y,z:DATA.z,colorscale:'Earth',cmin:995,cmax:1012,colorbar:{title:{text:'Elevation (m)'},len:.75},name:'Synthetic terrain',hovertemplate:'East %{x} m<br>North %{y} m<br>Elevation %{z:.2f} m<extra></extra>'};
+function waterTrace(level){return {type:'surface',x:DATA.x,y:DATA.y,z:DATA.z.map(row=>row.map(()=>level)),showscale:false,colorscale:[[0,'#3c91c9'],[1,'#3c91c9']],opacity:.45,name:'Water screening plane',hoverinfo:'skip'}}
+function summarize(level,factor){const below=DATA.z.flat().filter(v=>v<level).length,area=below*DATA.pixel_m**2;document.querySelector('#level').textContent=level;document.querySelector('#factor').textContent=factor+'×';document.querySelector('#summary').textContent=`${below} of ${DATA.z.flat().length} cells below ${level} m; screening area ${area.toLocaleString()} m².`;status.textContent=`Vertical exaggeration ${factor}× · below-plane area ${area.toLocaleString()} m² · not a flood forecast`;window.sceneState={level,factor,area}}
+const layout={margin:{l:0,r:0,t:5,b:0},paper_bgcolor:'#edf2f4',uirevision:'keep-camera',scene:{xaxis:{title:{text:'Local east (m)'},range:[0,2000]},yaxis:{title:{text:'Local north (m)'},range:[0,2000]},zaxis:{title:{text:'Elevation (m)'},range:[995,1012]},aspectmode:'manual',aspectratio:{x:1,y:1,z:17/2000*30},camera}};
+Plotly.newPlot(view,[terrain,waterTrace(1001)],layout,{responsive:true,displaylogo:false}).then(()=>{window.sceneReady=true;summarize(1001,30)});
+document.querySelector('#water').oninput=()=>{const level=Number(document.querySelector('#water').value),factor=Number(document.querySelector('#exaggeration').value);Plotly.restyle(view,{z:[waterTrace(level).z]},[1]);summarize(level,factor)};
+document.querySelector('#exaggeration').oninput=()=>{const level=Number(document.querySelector('#water').value),factor=Number(document.querySelector('#exaggeration').value);Plotly.relayout(view,{'scene.aspectratio':{x:1,y:1,z:17/2000*factor}});summarize(level,factor)};
+document.querySelector('#reset').onclick=()=>Plotly.relayout(view,{'scene.camera':camera});
+} catch(error){status.textContent='3D scene unavailable: '+error.message+'. Use the notebook static plot.'}
+</script></html>

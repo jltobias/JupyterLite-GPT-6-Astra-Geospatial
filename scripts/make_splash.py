@@ -3,7 +3,7 @@ from pathlib import Path
 import random
 root=Path(__file__).resolve().parents[1]
 parts=['''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
-<title id="title">JupyterLite + GPT-6 Astra Geospatial</title><desc id="desc">An original isometric city illustration connects buildings, sensors and routes. Ten browser-based experiments explore urban digital twins.</desc>
+<title id="title">JupyterLite + GPT-6 Astra Geospatial</title><desc id="desc">An original isometric city illustration connects buildings, sensors and routes. Sixteen browser-based experiments explore geospatial reasoning, 3D mapping and urban digital twins.</desc>
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081e2c"/><stop offset="1" stop-color="#123d49"/></linearGradient><radialGradient id="glow"><stop stop-color="#26d5bf" stop-opacity=".18"/><stop offset="1" stop-color="#26d5bf" stop-opacity="0"/></radialGradient></defs>
 <rect width="1440" height="620" rx="24" fill="url(#bg)"/><circle cx="1100" cy="280" r="410" fill="url(#glow)"/>
 <g font-family="Segoe UI,Arial,sans-serif"><text x="65" y="83" fill="#75e3cf" font-size="16" letter-spacing="4">URBAN TWIN LAB</text>
@@ -12,7 +12,7 @@ parts=['''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" view
 <text x="62" y="311" fill="#75e3cf" font-size="65" font-weight="700">Geospatial</text>
 <text x="65" y="368" fill="#c2d9df" font-size="22">Build a small city. Ask a better question.</text>
 <text x="65" y="400" fill="#c2d9df" font-size="22">Test what changes.</text>
-<rect x="65" y="453" width="228" height="42" rx="21" fill="#244957"/><text x="87" y="481" font-size="16" fill="#e3f5f6">10 RUNNABLE NOTEBOOKS</text>
+<rect x="65" y="453" width="228" height="42" rx="21" fill="#244957"/><text x="87" y="481" font-size="16" fill="#e3f5f6">16 RUNNABLE NOTEBOOKS</text>
 <text x="65" y="565" fill="#9dbcc6" font-size="16">DIGITAL TWINS  /  WORLD MODELS  /  PYODIDE + RUST / WASM</text></g>''']
 def xy(x,y,z=0): return (1045+(x-y)*34,340+(x+y)*17-z)
 def pts(seq): return ' '.join(f'{x:.1f},{y:.1f}' for x,y in seq)

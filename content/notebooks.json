@@ -48,5 +48,35 @@
     "slug": "10_rust_wasm",
     "title": "10 \u00b7 Rust/WASM spatial computation",
     "question": "When does a compiled spatial kernel help, and what does boundary overhead cost?"
+  },
+  {
+    "slug": "11_raster_change",
+    "title": "11 \u00b7 Raster change, clouds and missing evidence",
+    "question": "Can a model distinguish vegetation change from missing pixels?"
+  },
+  {
+    "slug": "12_equitable_siting",
+    "title": "12 \u00b7 Facility siting and equity tradeoffs",
+    "question": "Does the best average travel time also provide the fairest access?"
+  },
+  {
+    "slug": "13_spatial_benchmark",
+    "title": "13 \u00b7 Repeatable Astra spatial evaluation",
+    "question": "Can we compare spatial reasoning trials without leaking answers or hiding failures?"
+  },
+  {
+    "slug": "14_maplibre_3d",
+    "title": "14 \u00b7 Geographic building scenes with MapLibre",
+    "question": "How can a 3D map preserve geographic position and honest building heights?"
+  },
+  {
+    "slug": "15_deckgl_layers",
+    "title": "15 \u00b7 Layered 3D access maps with deck.gl",
+    "question": "Can an interactive map compare access scenarios without confusing people with metres?"
+  },
+  {
+    "slug": "16_terrain_3d",
+    "title": "16 \u00b7 Terrain and water-level exploration in 3D",
+    "question": "How much of a dramatic terrain scene is data, and how much is display exaggeration?"
   }
 ]

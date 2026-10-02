@@ -2,6 +2,9 @@
 import json
 import textwrap
 from pathlib import Path
+from teaching_cards import teaching_card
+from teaching_labs import add_labs
+from mapping_labs import add_mapping_labs
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = []
@@ -40,6 +43,9 @@ The baseline does not call or run GPT-6 Astra. No API key is needed.
 '''
     cells=[cell('markdown',intro),cell('code',SETUP)]
     for kind, text in sections: cells.append(cell(kind,text))
+    card = teaching_card(slug[:2])
+    if card:
+        cells.append(cell('markdown',card))
     cells.append(cell('markdown',f'''## Extend with Codex or Astra
 {extension}
 
@@ -164,7 +170,8 @@ for ax,times,label in zip(axes,[base,improved],['Baseline','With one additional 
     if label!='Baseline': ax.scatter(*nodes[best],marker='*',c='lime',s=160)
     map_axes(ax,label)
 fig.colorbar(dots,ax=list(axes),label='Walking minutes'); plt.show()
-export_json('03_access.json',dict(synthetic=True,best_node=best,candidate_weighted_minutes=scores,threshold_min=threshold_min))
+export_json('03_access.json',dict(synthetic=True,candidate_weighted_minutes=scores,threshold_min=threshold_min,
+            objective='minimize population-weighted mean walking minutes',candidate_id='array index'))
 ''')],
  'Introduce disconnected components, wheelchair accessibility, clinic opening hours, service capacity and combi waiting times. Report unreachable residents separately from average travel time.')
 
@@ -434,5 +441,7 @@ export_json('10_benchmark.json',dict(synthetic=True,wasm_loaded=wasm_fn is not N
 ''')],
  'Batch many queries in one call and measure crossover sizes. Add an R-tree or grid index and validate edge cases. Rust compiles at build time, not inside JupyterLite; a normal native wheel cannot be imported into Pyodide.')
 
+add_labs(notebook)
+add_mapping_labs(notebook)
 (ROOT/'content'/'notebooks.json').write_text(json.dumps(INDEX,indent=2),encoding='utf-8')
 print(f'Wrote {len(INDEX)} notebooks')

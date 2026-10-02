@@ -9,6 +9,7 @@ _book_build/
 book/notebooks/
 book/assets/
 book/guide.md
+book/teaching.md
 book/sources.md
 book/_toc.yml
 .jupyterlite.doit.db*

@@ -1,0 +1,10 @@
+*{box-sizing:border-box}body{margin:0;background:#edf2f4;color:#15323e;font:15px/1.45 system-ui,sans-serif}
+header{padding:16px 22px;background:#fff;border-bottom:1px solid #c5d4db}h1{font-size:23px;margin:0 0 5px}
+p{margin:5px 0}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;color:#087f8c}
+.controls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:12px 22px;background:#e1edf0}
+label{display:flex;gap:8px;align-items:center}button,select{font:inherit;padding:6px 10px;border:1px solid #93a9b3;border-radius:5px;background:white;color:#15323e}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b36200;outline-offset:3px}
+#view{height:440px;position:relative}#status{padding:8px 22px;font-weight:600}footer{padding:0 22px 12px;font-size:12px}
+details{padding:8px 22px;background:white}summary{cursor:pointer}table{border-collapse:collapse;font-size:13px;width:100%}th,td{text-align:left;padding:5px;border-bottom:1px solid #d5e0e5}
+.table-scroll{max-height:220px;overflow:auto}.swatch{display:inline-block;width:12px;height:12px;margin:0 4px 0 10px}
+.maplibregl-popup-content{font:13px/1.5 system-ui;color:#15323e}a{color:#076d78}

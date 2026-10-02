@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import shutil
 import time
 import nbformat
 
@@ -20,7 +21,10 @@ async def main():
     report=[]
     import matplotlib.pyplot as plt
     executed=ROOT/'test-results'/'executed'; executed.mkdir(parents=True,exist_ok=True)
-    for path in sorted(Path('.').glob('*.ipynb')):
+    items=json.loads(Path('notebooks.json').read_text(encoding='utf-8'))
+    expected={item['slug']+'.ipynb' for item in items}
+    assert expected=={p.name for p in Path('.').glob('*.ipynb')}, 'Notebook manifest differs from files'
+    for path in [Path(item['slug']+'.ipynb') for item in items]:
         nb=nbformat.read(path,as_version=4); nbformat.validate(nb)
         scope={'__name__':'__main__'}; start=time.perf_counter()
         outputs=[]
@@ -30,7 +34,10 @@ async def main():
                 outputs.append(nbformat.v4.new_output('display_data',data={'image/png':base64.b64encode(buffer.getvalue()).decode()}))
             plt.close('all')
         def show_value(value,*args,**kwargs):
-            outputs.append(nbformat.v4.new_output('display_data',data={'text/plain':repr(value)}))
+            data={'text/plain':repr(value)}
+            if hasattr(value,'_repr_html_'):
+                data['text/html']=value._repr_html_()
+            outputs.append(nbformat.v4.new_output('display_data',data=data))
         plt.show=show
         count=0
         for i,c in enumerate(nb.cells):
@@ -49,8 +56,11 @@ async def main():
         nbformat.write(nb,executed/path.name)
         report.append(dict(notebook=path.name,passed=True,seconds=round(time.perf_counter()-start,3)))
         print('PASS',path)
-    assert len(report)==10
+    assert len(report)==len(expected)>0
     out=ROOT/'test-results'; out.mkdir(exist_ok=True)
     (out/'desktop.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+    scene_dir=out/'scenes'; scene_dir.mkdir(exist_ok=True)
+    for name in ['14_maplibre_scene.html','15_deckgl_scene.html','16_terrain_scene.html']:
+        shutil.copy2(Path('exports')/name,scene_dir/name)
 
 asyncio.run(main())

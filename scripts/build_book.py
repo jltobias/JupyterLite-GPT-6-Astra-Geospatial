@@ -9,13 +9,14 @@ book=ROOT/'book'; notebooks=book/'notebooks'; notebooks.mkdir(exist_ok=True)
 assets=book/'assets'; assets.mkdir(exist_ok=True)
 shutil.copy2(ROOT/'assets/geospatial-splash.svg',assets/'geospatial-splash.svg')
 shutil.copy2(ROOT/'docs/GUIDE.md',book/'guide.md')
+shutil.copy2(ROOT/'docs/TEACHING.md',book/'teaching.md')
 readme=(ROOT/'README.md').read_text(encoding='utf-8')
 sources='# Sources, attribution and licenses\n\n'+readme.split('## Data sources and provenance\n',1)[1].split('## Build, validate and publish',1)[0]
 sources=sources.replace('](content/','](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/content/').replace('](assets/','](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/assets/').replace('](rust/','](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/rust/')
 sources=sources.replace('](LICENSE)','](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/LICENSE)').replace('](THIRD_PARTY_NOTICES.md)','](https://github.com/jltobias/JupyterLite-GPT-6-Astra-Geospatial/blob/main/THIRD_PARTY_NOTICES.md)')
 (book/'sources.md').write_text(sources,encoding='utf-8')
 items=json.loads((ROOT/'content/notebooks.json').read_text())
-toc='format: jb-book\nroot: index\nchapters:\n  - file: guide\n'
+toc='format: jb-book\nroot: index\nchapters:\n  - file: guide\n  - file: teaching\n'
 for item in items:
     name=item['slug']+'.ipynb'; source=ROOT/'test-results/executed'/name
     if not source.exists(): raise RuntimeError('Run scripts/check_notebooks.py --require-wasm first')

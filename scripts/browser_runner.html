@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><title>Urban Twin Lab browser validation</title>
 <style>body{font:16px system-ui;margin:20px}iframe{width:100%;height:700px;border:1px solid #ccc}pre{white-space:pre-wrap}button{padding:12px}</style>
-<h1>Browser validation: ten real JupyterLite kernels</h1><button id="start">Run all notebook checks</button><pre id="report">Ready</pre><iframe id="lab" src="lite/lab/index.html"></iframe>
+<h1>Browser validation: real JupyterLite kernels</h1><button id="start">Run all notebook checks</button><pre id="report">Ready</pre><iframe id="lab" src="lite/lab/index.html"></iframe>
 <script>
 document.querySelector('#start').onclick=async()=>{
  const report=document.querySelector('#report');const button=document.querySelector('#start');button.disabled=true;
@@ -26,7 +26,7 @@ document.querySelector('#start').onclick=async()=>{
    log('PASS '+path+' | '+code.length+' code cells | '+images+' plot(s)');
    await panel.context.save();await panel.sessionContext.shutdown();panel.close();
   }
-  log('ALL 10 NOTEBOOKS PASSED IN BROWSER PYODIDE');
+  log('ALL '+items.length+' NOTEBOOKS PASSED IN BROWSER PYODIDE');
  }catch(error){log('FAILED '+error.stack)}
  button.disabled=false;
 };

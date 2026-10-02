@@ -1,5 +1,29 @@
 # Validation record
 
+## Teaching and 3D expansion — October 2, 2026
+
+Reviewed baseline commit `31d70bb`, matching the remote HEAD at the start of this work. The existing numerical examples, explicit synthetic provenance, Rust parity checks and independent notebook execution were useful foundations. The main gaps were short model activities without a complete teaching workflow, one fixed spatial evaluation case, fixed ten-notebook test counts, and no interactive 3D scene beyond Matplotlib massing.
+
+Changes address these gaps with six new labs (11–16), teaching cards in the original ten notebooks, an instructor guide, a strict multi-case grader, three downloadable 3D scenes and manifest-driven checks. Notebook 03's evidence export no longer includes the winning node, so its model-selection task does not reveal the expected answer directly. Candidate scores remain available because that exercise tests selection and interpretation rather than independent routing.
+
+Local checks completed:
+
+- Ten numerical/contract test methods pass, including hand-checked raster masks, disconnected-population denominators, strict JSON grading, independently checked graph paths, and 3D coordinate/height preservation.
+- All sixteen notebooks execute on desktop Python 3.13 with schema validation, embedded assertions, static plots and the required Wasmtime kernel.
+- All sixteen notebooks also complete in JupyterLite/Pyodide with executed cells, no error outputs and static plots. All three mapping notebooks passed a focused rerun after the iframe fix below, including a rendered-feature check for MapLibre.
+- All three HTML scenes render in Chrome with real WebGL canvases. MapLibre height/top-view controls, deck.gl scenario/extrusion controls, and Plotly water/exaggeration controls pass automated checks. Scene screenshots were visually reviewed.
+- JupyterLite builds with all sixteen notebooks and shared scene templates. JupyterBook builds with warnings treated as errors, including the teaching chapter and interactive scene outputs.
+
+Reports and screenshots are written to ignored `test-results/`; scene exports are under `test-results/scenes/` and are copied explicitly into `_site/scenes/`. Learner exports are not published wholesale. CI also checks that notebook regeneration produces no committed notebook/manifest drift.
+
+Visual inspection caught a blank MapLibre iframe despite successful Python execution and a working standalone scene. The pinned renderer is affected by [MapLibre issue #7047](https://github.com/maplibre/maplibre-gl-js/issues/7047): direct `about:srcdoc` embeds can fail worker-origin checks. `scene_frame` now navigates a small bootstrap to a same-origin Blob document and revokes the URL after loading. Tests cover both standalone and embedded scenes, and MapLibre readiness requires actual rendered building features rather than initialization alone.
+
+The Playwright browser download was blocked locally by a certificate-chain error. Tests used installed Chrome through `BROWSER_EXECUTABLE`, preserving TLS verification. CI installs its own Chromium normally. Renderer versions are pinned and loaded from their CDNs; no completely offline claim is made.
+
+No actual Astra response was collected during this expansion. Passing fixtures validate the evaluator, not Astra performance. Synthetic scenarios do not validate real-world GIS, hydrology, equity policy, or urban forecasts. Changes are local until committed and published.
+
+## Original release
+
 Initial validation: October 1, 2026.
 
 | Check | Evidence |

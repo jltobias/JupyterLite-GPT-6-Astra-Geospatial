@@ -1,6 +1,6 @@
 # Urban Twin Lab: a practical research path
 
-This collection turns the user's interests into ten small experiments rather than a claim that a language model is already a validated GIS or urban digital twin. Start with notebooks 01–03, then 09 to evaluate Astra, 08 for learned dynamics, and 10 for Rust/WASM. Each notebook runs independently with synthetic data.
+This collection offers sixteen experiments in geospatial reasoning, urban scenarios and 3D mapping. Start with notebooks 01–03, then 09 and 13 to evaluate Astra, 08 for learned dynamics, and 14–16 for interactive 3D mapping. Each notebook runs independently with synthetic data. See the teaching chapter for workshop routes and assessment criteria.
 
 ## What Astra contributes
 
@@ -10,7 +10,7 @@ Use deterministic spatial calculations as the reference for distances, areas, to
 
 The [official model documentation](https://developers.openai.com/api/docs/models/gpt-6-astra) is the capability reference. The [Awesome Astra directory](https://github.com/magiccreator-ai/awesome-gpt-6-astra) is creative inspiration, not independent validation. Its 3D and simulation examples suggest interfaces and workflows; this repository does not copy their code, assets or performance claims. It also builds on the educational approach in [JupyterLite Astra Demos](https://github.com/jltobias/JupyterLite-Astra-demos).
 
-## Ten MVP ideas and expansion paths
+## Working labs and expansion paths
 
 | Notebook | Working MVP | Astra/Codex research question | Next useful increment |
 |---|---|---|---|
@@ -24,6 +24,12 @@ The [official model documentation](https://developers.openai.com/api/docs/models
 | 08 World model | Learned state/action dynamics and rollouts | Can it recognize extrapolation and compounding error? | Nonlinear dynamics, ensembles, model-based control |
 | 09 Astra evaluation | Map PNG, structured prompt, response validator | How do image-only, text-only and tool-assisted answers differ? | Thirty or more held-out maps and repeated trials |
 | 10 Rust/WASM | Compiled spatial sum with parity and timing | Can generated optimizations preserve numerical meaning? | Batched calls, spatial indexes, data transfer benchmarks |
+| 11 Raster change | Paired-valid date comparison and masked change area | Does it separate observed loss from cloud-hidden unknowns? | Registration checks and licensed imagery |
+| 12 Equitable siting | Exhaustive candidate table with two objectives | Does it obey the declared objective and denominator? | Capacity and group-definition sensitivity |
+| 13 Spatial suite | 30 seeded distance/routing/containment tasks | How do accuracy, invalid responses and missing cases vary? | Reserved seeds, repeated trials, new task families |
+| 14 MapLibre 3D | Geographic building extrusions and picking | Does it distinguish physical height from exaggeration? | Licensed footprints and explicit terrain datum |
+| 15 deck.gl | Polygon/path/facility layers and scenario controls | Can it audit a thematic population extrusion? | Trip animations and capacity-aware service layers |
+| 16 Terrain 3D | Orbitable Plotly surface and water plane | Can it distinguish a screening plane from flood evidence? | Licensed DEM and validated hydraulic model |
 
 ## How this relates to your presentations
 
@@ -55,7 +61,7 @@ Notebook 08 learns an intentionally simple transition function from an invented 
 1. Open the published gallery, select a notebook, then choose **Run → Run All Cells**. Wait for the initial runtime download. If prompted, select **Python (Pyodide)**.
 2. Edit the named parameters and rerun. The fixed seeds make before/after comparisons useful.
 3. Download exports from the notebook file browser. They live in browser storage, not your computer's working directory.
-4. For Astra trials, use notebook 09's prompt and PNG. Replace the fixture response, label the interface/model/date, and keep exact prompts and outputs. No live Astra request or benchmark is included in the baseline.
+4. For Astra trials, use notebook 09's prompt and PNG or lab 13's evidence-only task export. Labs 11–13 capture responses and scores. Replace the fixture response, label the interface/model/date, and keep exact prompts and outputs. No live Astra request or measured model benchmark is included in the baseline.
 5. For Codex, ask for a bounded change with a concrete invariant: “Add a second clinic capacity constraint; keep unreachable residents explicit; add a test that no clinic exceeds its capacity.”
 
 ### Desktop build
@@ -73,6 +79,7 @@ python scripts/test_core.py
 python scripts/check_notebooks.py --require-wasm
 python scripts/build_site.py
 python -m playwright install chromium
+python scripts/check_scenes.py
 python scripts/browser_check.py
 python -m http.server 8000 --directory _site
 ```

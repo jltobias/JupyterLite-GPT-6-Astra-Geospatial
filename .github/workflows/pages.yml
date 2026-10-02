@@ -29,6 +29,8 @@ jobs:
           cp rust/target/wasm32-unknown-unknown/release/twin_kernel.wasm content/assets/
       - name: Validate computations and notebooks
         run: |
+          python scripts/make_notebooks.py
+          git diff --exit-code -- 'content/*.ipynb' content/notebooks.json
           python scripts/test_core.py
           python scripts/check_notebooks.py --require-wasm
       - name: Build site
@@ -40,6 +42,7 @@ jobs:
       - name: Test notebooks in browser Pyodide
         run: |
           python -m playwright install --with-deps chromium
+          python scripts/check_scenes.py
           python scripts/browser_check.py
       - uses: actions/upload-artifact@v4
         if: always()

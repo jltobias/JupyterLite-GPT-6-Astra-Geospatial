@@ -2,22 +2,22 @@
 
 ![JupyterLite + GPT-6 Astra Geospatial: urban digital twins, browser experiments, world models and Rust/WASM](assets/geospatial-splash.svg)
 
-**Ten small urban digital-twin MVPs to run, inspect and extend in your browser.** Explore spatial reasoning, buildings, population, access, environmental scenarios, mobility, sensor assimilation, learned world models and Rust/WebAssembly.
+**Sixteen geospatial teaching labs to run, inspect and extend in your browser.** Explore spatial reasoning, urban scenarios, raster change, equitable access, repeatable Astra evaluation, and interactive 3D mapping with MapLibre, deck.gl and Plotly.
 
 ## Live learning environments
 
 | Experience | Live link |
 |---|---|
 | **JupyterBook: guided reading, code and example outputs** | [Open the JupyterBook](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/book/index.html) |
-| **JupyterLite: edit and execute all ten notebooks** | [Open JupyterLite Lab](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html) |
+| **JupyterLite: edit and execute all sixteen notebooks** | [Open JupyterLite Lab](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html) |
 | JupyterLite entry page | [JupyterLite index.html](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/index.html) |
-| Experiment gallery | [Browse the ten MVPs](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/index.html) |
+| Experiment gallery | [Browse the labs and 3D scenes](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/index.html) |
 
 The GitHub Actions workflow builds and publishes these paths. For a new fork, enable **Settings → Pages → Source: GitHub Actions** and run the workflow before using your fork's links.
 
 Choose a notebook, select **Python (Pyodide)** if prompted, and choose **Run → Run All Cells**. First use downloads the runtime and packages. The baseline needs no accounts, API keys, external datasets or paid map tiles. Download edited notebooks and files in `exports/` to keep them; browser edits do not automatically sync to GitHub.
 
-## The ten MVPs
+## The sixteen labs
 
 | # | Notebook | What you can change and test | Run |
 |---|---|---|---|
@@ -31,8 +31,18 @@ Choose a notebook, select **Python (Pyodide)** if prompted, and choose **Run →
 | 08 | [A tiny world model](content/08_world_model.ipynb) | Learned dynamics, held-out trajectories and rollouts | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=08_world_model.ipynb) |
 | 09 | [Astra spatial evaluation](content/09_astra_spatial_eval.ipynb) | Map/prompt export, response import and computed scoring | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=09_astra_spatial_eval.ipynb) |
 | 10 | [Rust/WASM kernel](content/10_rust_wasm.ipynb) | Numerical parity and Python/NumPy/WASM timing | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=10_rust_wasm.ipynb) |
+| 11 | [Raster change](content/11_raster_change.ipynb) | Paired-valid pixels, cloud masks and observed change area | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=11_raster_change.ipynb) |
+| 12 | [Equitable siting](content/12_equitable_siting.ipynb) | Efficiency versus worst-group coverage and explicit objectives | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=12_equitable_siting.ipynb) |
+| 13 | [Spatial benchmark](content/13_spatial_benchmark.ipynb) | 30 seeded tasks, response import, per-family scoring and provenance | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=13_spatial_benchmark.ipynb) |
+| 14 | [MapLibre 3D](content/14_maplibre_3d.ipynb) | Geographic building extrusions, picking and height exaggeration | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=14_maplibre_3d.ipynb) |
+| 15 | [deck.gl layers](content/15_deckgl_layers.ipynb) | Buildings, streets, clinic scenarios and thematic population extrusion | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=15_deckgl_layers.ipynb) |
+| 16 | [3D terrain](content/16_terrain_3d.ipynb) | Plotly surface, water-level controls and vertical exaggeration | [Launch](https://jltobias.github.io/JupyterLite-GPT-6-Astra-Geospatial/lite/lab/index.html?path=16_terrain_3d.ipynb) |
 
 Start with 01 → 02 → 03 for spatial foundations, 09 for model evaluation, and 08 → 10 for learned dynamics and compiled computation. See the [research guide](docs/GUIDE.md) for ideas and expansion paths.
+
+For **3D mapping**, follow 14 → 15 → 16. Each exports an interactive HTML scene with embedded synthetic data, a static notebook plot and explicit units. Scenes load pinned JavaScript renderers from CDNs and need WebGL; no basemap account, tile service or Python widget extension is required. Open a downloaded scene directly if notebook trust settings block the embedded view.
+
+The [teaching guide](docs/TEACHING.md) provides workshop routes, copyable prompts, an assessment rubric and sharing instructions. All original notebooks now include a bounded Codex task and acceptance criteria. Labs 11–13 add response capture and scoring; default answers remain explicitly labeled fixtures.
 
 ## What “GPT-6 Astra geospatial” means here
 
@@ -54,6 +64,9 @@ Astra is a reasoning/coding collaborator and a model to evaluate. These notebook
 | Sensors | Seeded random walk, noise and inserted gaps/outlier | Synthetic; MIT; no real devices |
 | World-model training/test data | Original two-state transition simulator | Synthetic; MIT; no pretrained weights |
 | Evaluation map, prompt and fixture | Original coordinates and computed truth | MIT; fixture is not an Astra response |
+| Raster-change grids and clouds | Original equations and fixed masks in lab 11 | Synthetic; MIT; not satellite imagery |
+| Evaluation suite | Original seeded distance, routing and rectangle tasks in [experiments.py](content/experiments.py) | Synthetic; MIT; fixtures are not model performance |
+| 3D scenes | Original building/network generators and analytic terrain | Synthetic; MIT; no observed heights, imagery or elevation tiles |
 | Benchmark points and WASM | Original arithmetic sequence and [Rust source](rust/src/lib.rs) | Source MIT; toolchain support retains upstream licenses |
 | Splash graphic | Original [SVG illustration](assets/geospatial-splash.svg) | MIT; no stock image, map tile, borrowed logo or raster generation |
 
@@ -95,10 +108,11 @@ python scripts/build_site.py
 python -m pip install -r requirements-book.txt
 python scripts/build_book.py
 python -m playwright install chromium
+python scripts/check_scenes.py
 python scripts/browser_check.py
 python -m http.server 8000 --directory _site
 ```
 
 CI recompiles Rust, checks the calculations, builds both sites and runs the notebooks in a browser kernel before publishing. The book contains validation-run outputs; JupyterLite provides editable execution. [Validation notes](docs/VALIDATION.md) distinguish completed checks from unperformed model evaluations.
 
-**Extend with Codex:** change one assumption, retain a fixed baseline, add a meaningful invariant, regenerate from `scripts/make_notebooks.py`, and rerun the checks. Never put an API secret in a notebook or static site.
+**Extend with Codex:** change one assumption, retain a fixed baseline, add a meaningful invariant, edit the authoring source (`scripts/make_notebooks.py` and the teaching/mapping modules it imports), regenerate, and rerun the checks. The editable 3D templates are in `content/scene_templates/`. Never put an API secret in a notebook or static site.
